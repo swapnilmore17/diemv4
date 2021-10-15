@@ -33,7 +33,8 @@ class QC:
 
 class Block:
 
-    def __init__(self,author,round,payload,qc,id) -> None:
+
+    def __init__(self,author,round,payload,qc,id):
         self.author=author
         self.round=round
         self.payload=payload
@@ -41,10 +42,12 @@ class Block:
         self.id = id
 
 class BlockTree:
-    def __init__(self,pending_block_tree,pending_votes,high_qc,high_commit_qc) -> None:
+
+
+    #######
+    def __init__(self,pending_block_tree,pending_votes,high_qc,high_commit_qc):
         
-        #tree object
-        
+        #tree object 
         self.pending_block_tree = pending_block_tree
         
         self.pending_votes=pending_votes
@@ -58,9 +61,25 @@ class BlockTree:
             self.high_commit_qc = max(qc,self.high_commit_qc)
         self.high_qc = max(qc,self.high_qc)
     
-    def execute_and_insert(b):
+    def execute_and_insert(self,b):
         ledger.speculate(b.qc.block_id,b.id,b.payload)
         pending_block_tree.add(b)
+    
+    def generate_block(self,txns,current_round):
+        b = Block(u,current_round,txns,self.high_qc,id)
+        return b
+
+    ############
+    #
+    def process_vote(self,v):
+        self.process_qc(v.high_commit_qc)
+        vote_idx = hash(v.ledger_commit_info)
+        self.pending_votes[vote_idx] = self.pending_votes[vote_idx] + v.signature
+        if self.pending_votes[vote_idx] == 2f+1:
+            commit_info = hash(v.state_id)
+            votes = self.pending_votes[vote_idx]
+            return QC(v.vote_info,commit_info,votes)
+        return None
 
     
 
