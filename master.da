@@ -1,0 +1,10 @@
+import os
+import sys
+import logging
+import time
+import datetime
+import uuid
+import traceback
+config(channel is {fifo, reliable}, clock is lamport)
+
+class Master(process):
