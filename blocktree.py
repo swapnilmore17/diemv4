@@ -24,7 +24,7 @@ class VoteMsg:
         self.signature=signature
 
 class QC:
-    def __init__(self,vote_info,ledger_commit_info,signatures,author,author_signature) -> None:
+    def __init__(self,vote_info,ledger_commit_info,signatures,author,author_signature):
         self.vote_info = vote_info
         self.ledger_commit_info = ledger_commit_info
         self.signatures = signatures
@@ -36,7 +36,7 @@ class Block:
         self.author=author
         self.round=round
         self.payload=payload
-        self.qc = new QC(qc)
+        self.qc = qc
         self.id = id
 
 class BlockTree:

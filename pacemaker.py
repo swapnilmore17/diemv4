@@ -1,5 +1,5 @@
 from ledger import Ledger
-from block-tree import BlockTree
+from blocktree import BlockTree
 
 class Pacemaker:
     def __init__(self,current_round,last_round_tc,pending_timeouts):
