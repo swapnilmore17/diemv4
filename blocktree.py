@@ -32,8 +32,6 @@ class QC:
         self.author_signature = author_signature
 
 class Block:
-
-
     def __init__(self,author,round,payload,qc,id):
         self.author=author
         self.round=round
@@ -48,7 +46,7 @@ class BlockTree:
     def __init__(self,pending_block_tree,pending_votes,high_qc,high_commit_qc):
         
         #tree object 
-        self.pending_block_tree = pending_block_tree
+        self.pending_block_tree = #instance of tree
         
         self.pending_votes=pending_votes
         self.high_qc=high_qc
