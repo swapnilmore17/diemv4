@@ -7,23 +7,24 @@ class Pacemaker:
         self.last_round_tc = last_round_tc
         self.pending_timeouts = pending_timeouts
     
-    def get_round_timer(r):
+    def get_round_timer(r,delta):
         
-        return #round timer formula
+        #round timer formula
+        return 4 * delta
 
-    def start_timer(new_round):
+    def start_timer(self,new_round):
         ######
         stop_timer(current_round)
-        current_round = new_round
+        self.current_round = new_round
         #start local timer for current_round for duration get_round_timer(current round)
 
     def local_timeout_round(self):
         #####
         save_consensus_state()
         #######
-        timeout_info = safety.make_timeout(self.current_round,block_tree.high_qc,self.last_round_tc)
+        timeout_info = safety.make_timeout(self.current_round,BlockTree.high_qc,self.last_round_tc)
         #######
-        return TimeoutMsg (timeout_info,self.last_round_tc, block_tree.high_commit_qc)
+        return TimeoutMsg (timeout_info,self.last_round_tc, BlockTree.high_commit_qc)
         #broadcast from da file
 
     def process_remote_timeout_round(self,tmo):
