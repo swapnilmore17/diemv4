@@ -8,18 +8,22 @@ class TreeUtility:
             node = self.tree.create_node(data=node)
         else:
             node = self.tree.create_node(parent=parent_id, data=node)
-        return self.tree
+        return node.identifier
+
+    def get_node(self, node_id):
+        return self.tree.get_node(node_id)
     
     def prune(self, node_id):
         tree = self.tree.remove_subtree(node_id)
         return tree
 
     def commit(self, node_id):
-        parent = self.tree.parent(node_id)        
-        siblings_list = self.tree.children(parent.identifier)
-        for node in siblings_list:
-            if node.identifier == node_id:
-                pass
-            else:
-                self.tree.remove_node(node.identifier)
+        parent = self.tree.parent(node_id)
+        if parent is not None:
+            siblings_list = self.tree.children(parent.identifier)
+            for node in siblings_list:
+                if node.identifier == node_id:
+                    pass
+                else:
+                    self.tree.remove_node(node.identifier)
         return self.tree
