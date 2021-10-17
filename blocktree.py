@@ -49,23 +49,24 @@ class BlockTree:
 
 
     ####### initialized in master.da
-    def __init__(self,pending_votes,high_qc,high_commit_qc):
+    def __init__(self):
         
         self.pending_block_tree = TreeUtility()
         
-        self.pending_votes=pending_votes
-        self.high_qc=high_qc
-        self.high_commit_qc=high_commit_qc
+        self.pending_votes={}
+        self.high_qc=None
+        self.high_commit_qc=None
     
     def process_qc(self,qc):
         if qc.ledger_commit_info:
             Ledger.commit(qc.vote_info.parent_id)
             self.pending_block_tree=self.pending_block_tree.prune(qc.vote_info.parent_id)
             self.high_commit_qc = max(qc,self.high_commit_qc)
+            ######compare qc.round in the line above
         self.high_qc = max(qc,self.high_qc)
     
     def execute_and_insert(self,b):
-        Ledger.speculate(b.qc.vote_info.id,b.id,b.payload)
+        Ledger.speculate(b.qc.vote_info.id,b.id,b)
         #how to get parent id
         #
         #
