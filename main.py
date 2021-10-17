@@ -1,10 +1,19 @@
 from pacemaker import Pacemaker
 from blocktree import BlockTree
+from treeutility import TreeUtility
+from ledger import Ledger
 class Main:
 
     #wait for next event and call start_event_processing()
 
-    def start_event_processing(self,message,current_round, leader):
+    # init pacemaker, block tree ,ledger
+
+    def __init__(self):
+        self.block_tree = TreeUtility()
+        self.ledger = Ledger()
+        self.pacemaker = Pacemaker()
+
+    def start_event_processing(self,message,current_round, leader,f):
         if message=='local_time_out':
             Pacemaker.local_timeout_round()
         if message=='proposal_message':
@@ -12,7 +21,7 @@ class Main:
         if message=='vote message':
             self.process_vote_message(message)
         if message=='timeout message':
-            self.process_timeout_message(message)
+            self.process_timeout_message(message,f)
 
     def process_certificate_qc(self,qc):
         BlockTree.process_qc(qc)
@@ -22,22 +31,22 @@ class Main:
     def process_proposal_message(self,p,current_round,leader):
         self.process_certificate_qc(p.block.qc)
         self.process_certificate_qc(p.high_commit)
-        Pacemaker.advance_round_tc(p['last_round_tc'])
+        Pacemaker.advance_round_tc(p.last_round_tc)
         round = Pacemaker.current_round
 
         leader =leader_election.get_leader(current_round)
-        if p.block.round!=round or p.sender!=leader or p['author']!=leader:
+        if p.block.round!=round or p.sender!=leader or p.author!=leader:
             return
         BlockTree.execute_and_insert(p)
-        vote_msg = safety.make_vote(p['block'],p['last_round_tc'])
+        vote_msg = safety.make_vote(p.block,p.last_round_tc)
         if vote_msg:
             send(vote_msg,to=leader_election.get_leader(current_round + 1))
 
-    def process_timeout_message(self,m):
+    def process_timeout_message(self,m,f):
         self.process_certificate_qc(m.tmo_info.high_qc)
         self.process_certificate_qc(m.high_commit_qc)
         Pacemaker.advance_round_tc(p.last_round_tc)
-        tc = Pacemaker.process_remote_timeout(m)
+        tc = Pacemaker.process_remote_timeout(m,f)
         if tc:
             Pacemaker.advance_round(tc)
             self.process_new_round_event(tc)

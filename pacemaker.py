@@ -15,19 +15,20 @@ class Pacemaker:
     def start_timer(self,new_round):
         ######
         stop_timer(current_round)
+        #change the run_done value
         self.current_round = new_round
         #start local timer for current_round for duration get_round_timer(current round)
 
     def local_timeout_round(self):
         #####
-        save_consensus_state()
+        #save_consensus_state()
         #######
         timeout_info = safety.make_timeout(self.current_round,BlockTree.high_qc,self.last_round_tc)
         #######
         return TimeoutMsg (timeout_info,self.last_round_tc, BlockTree.high_commit_qc)
         #broadcast from da file
 
-    def process_remote_timeout_round(self,tmo):
+    def process_remote_timeout_round(self,tmo,f):
         tmo_info = tmo.tmo_info
         if tmo_info.round < self.current_round:
             return None
@@ -38,7 +39,7 @@ class Pacemaker:
         if len(self.pending_timeouts[tmo_info.round].sender)==f+1:
             stop_timer(self.current_round)
             self.local_timeout_round()
-        if len(self.pending_timeouts[tmo_info.round].sender)==f2+1:
+        if len(self.pending_timeouts[tmo_info.round].sender)==f*2+1:
             t = TC(
                 round=tmo_info.round,
                 #########
