@@ -15,7 +15,7 @@ config(channel is {fifo, reliable}, clock is lamport)
 class Validator(process):
 
     def setup(config, validator_list):
-        self.main = Main()
+        self.main = Main(validator_list)
         self.id = config['id']
         self.validator_list = validator_list
 

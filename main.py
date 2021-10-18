@@ -10,13 +10,14 @@ class Main:
 
     #wait for next event and call start_event_processing()
 
-    def __init__(self):
+    def __init__(self,validator_list):
+        self.validator_list = validator_list
         self.block_tree = TreeUtility()
         self.ledger = Ledger(self.block_tree)
-        self.safey = Safety(self.block_tree,self.ledger)
+        self.safey = Safety(self.block_tree,self.ledger)####remaining values
         self.pacemaker = Pacemaker(0,None,{},self.safety,self.block_tree)
         self.mempool=Mempool()
-        self.leader_election = LeaderElection()
+        self.leader_election = LeaderElection(self.validator_list)  ##remaining values
 
     #def start_event_processing(self,message,current_round, leader,f):
 

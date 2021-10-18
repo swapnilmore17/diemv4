@@ -2,8 +2,8 @@ from ledger import Ledger
 from pacemaker import Pacemaker
 import math, random
 class LeaderElection:
-    def __init__(self,validators,window_size,exclude_size,reputation_leaders):
-        self.validators = validators     #The list of current validators
+    def __init__(self,validator_list,window_size,exclude_size,reputation_leaders):
+        self.validators = validator_list    #The list of current validators
         self.window_size = window_size    #A parameter for the leader reputation algorithm
         self.exclude_size = exclude_size    #Between f and 2f, number of excluded authors of last committed blocks reputation leaders; // Map from round numbers to leaders elected due to the reputation scheme
         self.reputation_leaders = reputation_leaders    #Map from round numbers to leaders elected due to the reputation scheme
