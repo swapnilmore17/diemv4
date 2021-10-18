@@ -1,12 +1,16 @@
 from ledger import Ledger
 from blocktree import BlockTree
+from datastructs import TimeoutMsg
 from datastructs import TC
+from safety import Safety
 
 class Pacemaker:
     def __init__(self,current_round,last_round_tc,pending_timeouts):
         self.current_round = current_round
         self.last_round_tc = last_round_tc
         self.pending_timeouts = pending_timeouts
+        self.run_done = False
+        self.round_done = False
     
     def get_round_timer(r,delta):
         
@@ -15,16 +19,23 @@ class Pacemaker:
 
     def start_timer(self,new_round):
         ######
-        stop_timer(current_round)
+        #stop_timer(current_round)
+        self.round_done=True
         #change the run_done value
         self.current_round = new_round
+
+        
+        """"""""""""""
         #start local timer for current_round for duration get_round_timer(current round)
+    """"""
+    def stop_timer(round):
+        print(round)
 
     def local_timeout_round(self):
         #####
         #save_consensus_state()
         #######
-        timeout_info = safety.make_timeout(self.current_round,BlockTree.high_qc,self.last_round_tc)
+        timeout_info = Safety.make_timeout(self.current_round,BlockTree.high_qc,self.last_round_tc)
         #######
         return TimeoutMsg (timeout_info,self.last_round_tc, BlockTree.high_commit_qc)
         #broadcast from da file
@@ -40,7 +51,9 @@ class Pacemaker:
         if tmo_info.sender not in sender_list:
             self.pending_timeouts[tmo_info.round] = self.pending_timeouts[tmo_info.round] + [tmo_info]
         if len(sender_list)==f+1:
-            stop_timer(self.current_round)
+            """"""
+            self.stop_timer(self.current_round)
+
             self.local_timeout_round()
         if len(sender_list)==f*2+1:
             t = TC(

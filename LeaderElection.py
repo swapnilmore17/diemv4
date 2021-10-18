@@ -13,10 +13,11 @@ class LeaderElection:
         last_authors = [] # ordered set of authors of last exclude size committed blocks 
         current_qc = qc
         i = 0
-        while i<self.window_size and len(last_authors) < self.exclude_size:
+        while i<self.window_size or len(last_authors) < self.exclude_size:
             current_block = Ledger.committed_block(current_qc.vote_info.parent_id)
             block_author = current_block.author
             if i < self.window_size:
+                ########
                 active_validators.append(current_qc.signatures.signers()) 
             if len(last_authors) < self.exclude_size :
                 last_authors.append(block_author)

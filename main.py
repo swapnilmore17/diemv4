@@ -13,7 +13,7 @@ class Main:
         self.block_tree = TreeUtility()
         self.ledger = Ledger()
         self.pacemaker = Pacemaker()
-        self.mempool = Mempool()
+        #self.mempool = Mempool()
 
         ###
         ###
@@ -34,17 +34,18 @@ class Main:
 
         leader =self.leader_election.get_leader(current_round)
         if p.block.round!=round or p.sender!=leader or p.author!=leader:
-            return
+            return None
         self.block_tree.execute_and_insert(p)
         vote_msg = self.safety.make_vote(p.block,p.last_round_tc)
         if vote_msg:
             next_leader = self.leader_election.get_leader(current_round + 1)
             return (vote_msg,next_leader)
+        return None
 
     def process_timeout_message(self,m,f):
         self.process_certificate_qc(m.tmo_info.high_qc)
         self.process_certificate_qc(m.high_commit_qc)
-        self.pacemaker.advance_round_tc(p.last_round_tc)
+        self.pacemaker.advance_round_tc(m.last_round_tc)
         tc = self.pacemaker.process_remote_timeout(m,f)
         if tc:
             self.pacemaker.advance_round(tc)
@@ -67,6 +68,7 @@ class Main:
             #add author of block
             msg = ProposalMsg(b,last_tc,self.block_tree.high_commit_qc)
             return msg 
+        return None
 
 
         
