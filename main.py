@@ -14,8 +14,8 @@ class Main:
         self.validator_index = validator_index
         self.validator_list = validator_list
         self.block_tree = TreeUtility()
-        self.ledger = Ledger(self.block_tree)
-        self.safey = Safety(self.block_tree,self.ledger)####remaining values
+        self.ledger = Ledger()
+        self.safey = Safety(self.block_tree,self.ledger,0)####remaining values
         self.pacemaker = Pacemaker(0,None,{},self.safety,self.block_tree)
         self.mempool=Mempool()
         self.leader_election = LeaderElection(self.validator_list,10,0,self.ledger,self.pacemaker)  ##remaining values

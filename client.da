@@ -1,15 +1,14 @@
 class Client(process):
 
-    def setup(id,validators_list,f_nodes):
+    def setup(id,validators_list,f_nodes,n_messages):
         self.id = id
         self.validators_list = validators_list
         self.f_nodes = f_nodes
 
     def run():
-        messages=[]
-        for i in range(n_messages):
-            messages.append('Client 1' + ' - ' + 'message' + i)
 
-        send(('transactions',),to=validators_list)
+        for i in range(n_messages):
+            message = 'Client 1' + ' - ' + 'message' + i
+            send(('client_transactions',message),to=validators_list)
 
     def receive():

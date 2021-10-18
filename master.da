@@ -9,12 +9,12 @@ def main():
     validator_set = new(Validator,num=nprocs)
     validator_set_id = [uuid.uuid4() for x in range(len(validator_set))]
     
-    for i in range(0,len(validator_set)): setup(validator_set_id[i],(validator_set_id[i],validator_set,i))
+    for i in range(0,len(validator_set)): setup(validator_set[i],(validator_set_id[i],validator_set,i))
     start(validator_set)
 
     client_config = {}
     client = new(Client)
-    setup(client,(uuid.uuid4(),validator_set,f_nodes))
+    setup(client,(uuid.uuid4(),validator_set,f_nodes,n_messages))
     start(client)
 
 
