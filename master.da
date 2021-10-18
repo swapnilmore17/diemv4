@@ -1,10 +1,20 @@
 from validator import Validator
+from client import Client
 import uuid
 
 def main():
-    config = {
-        'id':uuid.uuid4()
-    }
+    
+    #read config file
+
     validator_set = new(Validator,num=nprocs)
-    for i in range(0,len(validator_set)): setup(validator_set[i],(config,validator_set,i))
+    validator_set_id = [uuid.uuid4() for x in range(len(validator_set))]
+    
+    for i in range(0,len(validator_set)): setup(validator_set_id[i],(validator_set_id[i],validator_set,i))
     start(validator_set)
+
+    client_config = {}
+    client = new(Client)
+    setup(client,(uuid.uuid4(),validator_set,f_nodes))
+    start(client)
+
+
