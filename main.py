@@ -17,7 +17,7 @@ class Main:
         self.safey = Safety(self.block_tree,self.ledger)####remaining values
         self.pacemaker = Pacemaker(0,None,{},self.safety,self.block_tree)
         self.mempool=Mempool()
-        self.leader_election = LeaderElection(self.validator_list)  ##remaining values
+        self.leader_election = LeaderElection(self.validator_list,10,0,self.ledger,self.pacemaker)  ##remaining values
 
     #def start_event_processing(self,message,current_round, leader,f):
 
@@ -32,13 +32,15 @@ class Main:
         self.pacemaker.advance_round_tc(p.last_round_tc)
         round = self.pacemaker.current_round
 
-        leader =self.leader_election.get_leader(current_round)
+        leader_index =self.leader_election.get_leader(current_round)
+        leader = self.validator_list[leader_index]
         if p.block.round!=round or p.sender!=leader or p.author!=leader:
             return None
         self.block_tree.execute_and_insert(p)
         vote_msg = self.safety.make_vote(p.block,p.last_round_tc)
         if vote_msg:
-            next_leader = self.leader_election.get_leader(current_round + 1)
+            next_leader_index = self.leader_election.get_leader(current_round + 1) 
+            next_leader = self.validator_list[next_leader_index]
             return (vote_msg,next_leader)
         return None
 
