@@ -33,7 +33,7 @@ class Ledger:
             filename = "ledgerstore"
             ledgerfile = open(filename, "ab")
             # Generate hash of previous state with committed block's payload
-            self.ledger_state = hash(str(self.ledger_state) + str(node.data))
+            self.ledger_state = str(self.ledger_state) +" "+ str(node.data)
             self.blockid_to_commitid_mapper[block_id] = str(self.ledger_state)
             pickle.dump(self.ledger_state, ledgerfile) # Store ledger state into ledger
             pickle.dump(node.data, ledgerfile) # Store payload into ledger

@@ -13,7 +13,7 @@ class Main:
     def __init__(self,validator_list,validator_index):
         self.validator_index = validator_index
         self.validator_list = validator_list
-        self.block_tree = TreeUtility()
+        self.block_tree = BlockTree()
         self.ledger = Ledger()
         self.safey = Safety(self.block_tree,self.ledger,0)####remaining values
         self.pacemaker = Pacemaker(0,None,{},self.safety,self.block_tree)
