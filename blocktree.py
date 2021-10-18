@@ -61,9 +61,8 @@ class BlockTree:
         if qc.ledger_commit_info:
             Ledger.commit(qc.vote_info.parent_id)
             self.pending_block_tree=self.pending_block_tree.prune(qc.vote_info.parent_id)
-            self.high_commit_qc = max(qc,self.high_commit_qc)
-            ######compare qc.round in the line above
-        self.high_qc = max(qc,self.high_qc)
+            self.high_commit_qc = max(qc.vote_info.round,self.high_commit_qc.vote_info.round)
+        self.high_qc = max(qc.vote_info.round,self.high_qc.vote_info.round)
     
     def execute_and_insert(self,b):
         Ledger.speculate(b.qc.vote_info.id,b.id,b)
@@ -79,12 +78,12 @@ class BlockTree:
         b = Block(author,current_round,txns,self.high_qc,uuid.uuid4())
         return b
 
-    ############
-    #
-    def process_vote(self,v,f):
+    def process_vote(self,v,f,author):
         self.process_qc(v.high_commit_qc)
         vote_idx = hash(v.ledger_commit_info)
         #if vote idx does not exist???
+        if vote_idx not in self.pending_votes.keys():
+            self.pending_votes[vote_idx]=[]
         self.pending_votes[vote_idx] = self.pending_votes[vote_idx] + v.signature
         if len(self.pending_votes[vote_idx]) == 2*f+1:
             commit_info = hash(v.state_id)
