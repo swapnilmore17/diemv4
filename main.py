@@ -2,6 +2,8 @@ from pacemaker import Pacemaker
 from blocktree import BlockTree
 from treeutility import TreeUtility
 from ledger import Ledger
+from LeaderElection import LeaderElection
+from mempool import Mempool
 class Main:
 
     #wait for next event and call start_event_processing()
@@ -12,6 +14,7 @@ class Main:
         self.block_tree = TreeUtility()
         self.ledger = Ledger()
         self.pacemaker = Pacemaker()
+        self.mempool = Mempool()
 
     def start_event_processing(self,message,current_round, leader,f):
         if message=='local_time_out':

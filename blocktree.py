@@ -65,7 +65,7 @@ class BlockTree:
         self.high_qc = max(qc.vote_info.round,self.high_qc.vote_info.round)
     
     def execute_and_insert(self,b):
-        Ledger.speculate(b.qc.vote_info.id,b.id,b)
+        id = Ledger.speculate(b.qc.vote_info.id,b.id,b)
         #how to get parent id
         #
         #

@@ -25,4 +25,4 @@ class ProposalMsg:
         self.last_round_tc = last_round_tc
         self.high_commit_qc = high_commit_qc
         self.signature = sign(block.id)
-        pass
+        
