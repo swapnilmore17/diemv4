@@ -47,7 +47,6 @@ class Block:
 
 class BlockTree:
 
-
     ####### initialized in master.da
     def __init__(self):
         
@@ -67,11 +66,7 @@ class BlockTree:
     def execute_and_insert(self,b):
         id = Ledger.speculate(b.qc.vote_info.id,b.id,b)
         #how to get parent id
-        #
-        #
-        ##
-        #
-        self.pending_block_tree=self.pending_block_tree.add(b)
+        self.pending_block_tree=self.pending_block_tree.add(b,b.qc.vote_info.id)
     
     def generate_block(self,txns,current_round,author):
         #where will author come from
@@ -84,7 +79,7 @@ class BlockTree:
         #if vote idx does not exist???
         if vote_idx not in self.pending_votes.keys():
             self.pending_votes[vote_idx]=[]
-        self.pending_votes[vote_idx] = self.pending_votes[vote_idx] + v.signature
+        self.pending_votes[vote_idx] = self.pending_votes[vote_idx] + [v.signature]
         if len(self.pending_votes[vote_idx]) == 2*f+1:
             commit_info = hash(v.state_id)
             votes = self.pending_votes[vote_idx]
