@@ -38,7 +38,8 @@ class Ledger:
             pickle.dump(self.ledger_state, ledgerfile) # Store ledger state into ledger
             pickle.dump(node.data, ledgerfile) # Store payload into ledger
             self.tree_utility.commit(node_id) #Remove uncommitted sibling branches
-            return str(self.ledger_state)       
+            return str(self.ledger_state)
+        return ''
 
     # Returns block from pending tree using block ID
     def commited_block(self, block_id):

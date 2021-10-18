@@ -10,8 +10,9 @@ class Main:
 
     #wait for next event and call start_event_processing()
 
-    def __init__(self,validator_list,validator_index):
+    def __init__(self,validator_list,validator_index,f_nodes):
         self.validator_index = validator_index
+        self.f_nodes=f_nodes
         self.validator_list = validator_list
         self.block_tree = BlockTree()
         self.ledger = Ledger()
@@ -58,7 +59,7 @@ class Main:
 
 
     def process_vote_message(self,m):
-        qc = self.block_tree.process_vote(m)
+        qc = self.block_tree.process_vote(m,self.f_nodes,self.validator_list[self.validator_index])
         if qc:
             self.process_certificate_qc(qc)
             msg = self.process_new_round_event(None)
