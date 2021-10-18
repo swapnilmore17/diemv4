@@ -17,7 +17,7 @@ class Validator(process):
         
     def run():
         Pacemaker.run_done = False
-        while Pacemaker.not run_done:
+        while not Pacemaker.run_done:
             Pacemaker.round_done = False
             timer_duration = Pacemaker.get_round_timer(Pacemaker.current_round)
             await Pacemaker.round_done: pass

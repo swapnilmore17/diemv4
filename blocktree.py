@@ -58,7 +58,7 @@ class BlockTree:
     
     def process_qc(self,qc):
         if qc.ledger_commit_info:
-            Ledger.commit(qc.vote_info.parent_id)
+            ledger_state=Ledger.commit(qc.vote_info.parent_id)
             self.pending_block_tree=self.pending_block_tree.prune(qc.vote_info.parent_id)
             self.high_commit_qc = max(qc.vote_info.round,self.high_commit_qc.vote_info.round)
         self.high_qc = max(qc.vote_info.round,self.high_qc.vote_info.round)
