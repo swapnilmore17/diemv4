@@ -1,0 +1,32 @@
+import os
+import sys
+import logging
+import time
+import datetime
+import uuid
+import traceback
+config(channel is {fifo, reliable}, clock is lamport)
+
+class Validator(process):
+
+    def setup(config):
+        
+    def run():
+        
+
+    def receive(msg=('local_time_out',msg)):
+        Pacemaker.local_time_out()
+
+    def receive(msg=('proposal_message',msg)):
+        msg,leader = Main.process_proposal_message(msg,Pacemaker.current_round)
+        send(('vote_message',msg),to=leader)
+    
+    def receive(msg=('vote_message',msg)):
+        msg = Main.process_vote_message(msg)
+        send(('proposal_message',msg),to=#all validators)
+    
+    def receive(msg=('timeout_message',msg)):
+        msg = Main.process_timeout_message(msg)
+        send(('proposal_message',msg),to=#all validators)
+
+
