@@ -28,8 +28,8 @@ class Pacemaker:
         """"""""""""""
         #start local timer for current_round for duration get_round_timer(current round)
     """"""
-    def stop_timer(round):
-        print(round)
+    def stop_timer(self,round):
+        self.round_done=False
 
     def local_timeout_round(self):
         #####

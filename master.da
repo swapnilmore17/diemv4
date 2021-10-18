@@ -1,0 +1,10 @@
+from validator import Validator
+import uuid
+
+def main():
+    config = {
+        'id':uuid.uuid4()
+    }
+    validator_set = new(Validator,num=nprocs)
+    for p in validator_set: setup(p,(config,validator_set))
+    start(validator_set)

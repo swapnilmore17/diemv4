@@ -12,11 +12,8 @@ class Main:
     def __init__(self):
         self.block_tree = TreeUtility()
         self.ledger = Ledger()
-        self.pacemaker = Pacemaker()
-        #self.mempool = Mempool()
-
-        ###
-        ###
+        self.pacemaker = Pacemaker(0,None,{})
+        self.mempool=Mempool()
         self.leader_election = LeaderElection()
 
     #def start_event_processing(self,message,current_round, leader,f):
@@ -55,7 +52,7 @@ class Main:
 
 
     def process_vote_message(self,m):
-        qc = self.BlockTree.process_vote(m)
+        qc = self.block_tree.process_vote(m)
         if qc:
             self.process_certificate_qc(qc)
             msg = self.process_new_round_event(None)

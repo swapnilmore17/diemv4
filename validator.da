@@ -5,42 +5,44 @@ import time
 import datetime
 import uuid
 import traceback
+from mempool import Mempool
+from pacemaker import Pacemaker
+
+
 config(channel is {fifo, reliable}, clock is lamport)
 
 class Validator(process):
 
-    def setup(config):
+    def setup(config, validator_list):
+        self.main = Main()
         self.id = config['id']
 
-        #setup main, Pacemaker??
-        #
-        
     def run():
-        Pacemaker.run_done = False
-        while not Pacemaker.run_done:
-            Pacemaker.round_done = False
-            timer_duration = Pacemaker.get_round_timer(Pacemaker.current_round)
-            await Pacemaker.round_done: pass
-            timeout timer_duration: Pacemaker.local_timeout_round()
+        main.pacemaker.run_done = False
+        while not main.pacemaker.run_done:
+            main.pacemaker.round_done = False
+            timer_duration = main.pacemaker.get_round_timer(main.pacemaker.current_round)
+            await(main.pacemaker.round_done): pass
+            timeout (timer_duration): main.pacemaker.local_timeout_round()
 
+    #wait for next event and call event processing
+    def receive(msg=('done',)from_=p):
+        main.pacemaker.round_done=True
 
-    def receive(msg=('local_time_out',msg)):
-        Pacemaker.local_time_out()
-
-    def receive(msg=('proposal_message',msg)):
-        x = Main.process_proposal_message(msg,Pacemaker.current_round)
+    def receive(msg=('proposal_message',message)):
+        x = main.process_proposal_message(message,main.pacemaker.current_round)
         if x:
-            msg,leader=x
-            send(('vote_message',msg),to=leader)
+            message,leader=x
+            send(('vote_message',message),to=leader)
     
-    def receive(msg=('vote_message',msg)):
-        msg = Main.process_vote_message(msg)
-        if msg:
-            send(('proposal_message',msg),to=#all validators)
+    def receive(msg=('vote_message',message)):
+        message = main.process_vote_message(message)
+        if message:
+            send(('proposal_message',message),to=validator_list)
     
-    def receive(msg=('timeout_message',msg)):
-        msg = Main.process_timeout_message(msg)
-        if msg:
-            send(('proposal_message',msg),to=#all validators)
+    def receive(msg=('timeout_message',message)):
+        message = main.process_timeout_message(message)
+        if message:
+            send(('proposal_message',message),to=validator_list)
 
 
