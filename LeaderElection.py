@@ -7,7 +7,7 @@ class LeaderElection:
         self.validators = validator_list    #The list of current validators
         self.window_size = window_size    #A parameter for the leader reputation algorithm
         self.exclude_size = exclude_size    #Between f and 2f, number of excluded authors of last committed blocks reputation leaders; // Map from round numbers to leaders elected due to the reputation scheme
-        self.reputation_leaders = []    #Map from round numbers to leaders elected due to the reputation scheme
+        self.reputation_leaders = {}    #Map from round numbers to leaders elected due to the reputation scheme
 
     def elect_reputation_leader(self,qc):
         active_validators = [] # validators that signed the last window size committed blocks 
@@ -18,8 +18,8 @@ class LeaderElection:
             current_block = self.ledger_module.committed_block(current_qc.vote_info.parent_id)
             block_author = current_block.author
             if i < self.window_size:
-                ########
-                active_validators.append(current_qc.signatures.signers()) 
+                active_validators = self.validators
+                #active_validators.append(current_qc.signatures.signers())
             if len(last_authors) < self.exclude_size :
                 last_authors.append(block_author)
             current_qc = current_block.qc

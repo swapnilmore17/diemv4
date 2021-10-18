@@ -2,21 +2,21 @@ from ledger import Ledger
 from blocktree import VoteInfo, LedgerCommitInfo, VoteMsg, BlockTree
 from datastructs import TimeoutInfo
 class Safety:
-    def __init__(self, block_tree_module, ledger_module,private_key, public_keys, highest_vote_round, highest_qc_round):
+    def __init__(self, block_tree_module, ledger_module, highest_vote_round, highest_qc_round):
         
         self.block_tree_module = block_tree_module
         self.ledger_module = ledger_module
-        self.__private_key = private_key # Own private key
-        self.__public_keys = public_keys # Public keys of all validators 
+        #self.__private_key = private_key # Own private key
+        #self.__public_keys = public_keys # Public keys of all validators
         self.__highest_vote_round = highest_vote_round # initially 0
-        self.__highest_qc_round = highest_qc_round
+        self.__highest_qc_round = highest_qc_round #trying 0
 
     def __increase_highest_vote_round(self, round):
         # commit not to vote in rounds lower than round
-        self.highest_vote_round = max(round, self.highest_vote_round)
+        self.__highest_vote_round = max(round, self.__highest_vote_round)
 
     def __update_highest_qc_round(self, qc_round):
-        self.highest_qc_round = max(qc_round, self.highest_qc_round)
+        self.__highest_qc_round = max(qc_round, self.__highest_qc_round)
 
     def __consecutive(self, block_round, round):
         return round + 1 == block_round
@@ -46,8 +46,7 @@ class Safety:
             return None
 
     def __valid_signatures(self):
-        #TODO
-        return
+        return True
 
     def make_vote(self, b, last_tc):
         qc_round = b.qc.vote_info.round
@@ -55,9 +54,8 @@ class Safety:
             self.__update_highest_qc_round(qc_round) # Protect qc round
             self.__increase_highest_vote_round(b.round) # Don’t vote again in this (or lower) round
             #VoteInfo carries the potential QC info with ids and rounds of the parent QC
-            
-            vote_info = VoteInfo(b.id, b.round, b.qc.vote_info.id, qc_round)
             exec_state_id = self.ledger_module.pending_state(b.id)
+            vote_info = VoteInfo(b.id, b.round, b.qc.vote_info.id, qc_round, exec_state_id)
             ledger_commit_info = LedgerCommitInfo (self.__commit_state_id_candidate(b.round, b.qc), hash(vote_info)) 
             return VoteMsg(vote_info, ledger_commit_info, self.block_tree_module.high_commit_qc) 
         return None
