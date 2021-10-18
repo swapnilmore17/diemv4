@@ -1,3 +1,5 @@
+from ledger import Ledger
+from pacemaker import Pacemaker
 class LeaderElection:
     def __init__(self,validators,window_size,exclude_size,reputation_leaders):
         self.validators = validators     #The list of current validators
@@ -10,7 +12,7 @@ class LeaderElection:
         last_authors = None # ordered set of authors of last exclude size committed blocks 
         current_qc = qc
         ####
-        for i = 0; i < self.window_size or |last_authors| < self.exclude_size; i ← i + 1 :
+        for i = 0; i < self.window_size or last_authors < self.exclude_size; i = i + 1):
             current_block = Ledger.committed_block(current_qc.vote_info.parent_id)
             block_author = current_block.author
             if i < self.window_size:
