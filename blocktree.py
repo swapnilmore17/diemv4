@@ -23,7 +23,7 @@ class VoteMsg:
         self.ledger_commit_info = ledger_commit_info
         self.high_commit_qc = high_commit_qc
         self.sender=sender
-        self.signature=hash(ledger_commit_info)
+        self.signature=str(ledger_commit_info.commit_state_id) + str(ledger_commit_info.vote_info_hash)
 
 class QC:
     def __init__(self,vote_info,ledger_commit_info,signatures,author):
@@ -34,7 +34,7 @@ class QC:
         #####
         #####
         ####
-        self.author_signature = hash(author)
+        self.author_signature = str(author)
 
 #checked with function call
 class Block:
@@ -76,13 +76,15 @@ class BlockTree:
 
     def process_vote(self,v,f,author):
         self.process_qc(v.high_commit_qc)
-        vote_idx = hash(v.ledger_commit_info)
+        vote_idx = str(v.ledger_commit_info.commit_state_id)+str(v.ledger_commit_info.vote_info_hash)
         #if vote idx does not exist???
         if vote_idx not in self.pending_votes.keys():
             self.pending_votes[vote_idx]=[]
         self.pending_votes[vote_idx] = self.pending_votes[vote_idx] + [v.signature]
         if len(self.pending_votes[vote_idx]) == 2*f+1:
-            commit_info = hash(v.state_id)
+            commit_info = v.ledger_commit_info
+            #str(v.ledger_commit_info.commit_state_id)+str(v.ledger_commit_info.vote_info_hash)
+            #hash(v.ledger_commit_info)
             votes = self.pending_votes[vote_idx]
 
             #
