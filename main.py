@@ -26,7 +26,7 @@ class Main:
     def process_certificate_qc(self,qc):
         BlockTree.process_qc(qc)
         leader_election.update_leaders(qc)
-        Pacemaker.advance_round(qc.vote_info.round)
+        Pacemaker.advance_round_qc(qc.vote_info.round)
 
     def process_proposal_message(self,p,current_round,leader):
         self.process_certificate_qc(p.block.qc)
@@ -59,7 +59,7 @@ class Main:
     
     def process_new_round_event(last_tc):
         if leader_election.get_leader(pacemaker.current_round):
-            b = block_tree.generate_block(mempool.get_transactions(),pacemaker.current_round)
+            b = block_tree.generate_block(mempool.get_transactions(),Pacemaker.current_round)
             #add author of block
 
             broadcast()

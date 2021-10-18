@@ -34,17 +34,19 @@ class Pacemaker:
             return None
 
         ###########
-        if tmo_info.sender not in self.pending_timeouts[tmo_info.round].sender:
+        sender_list = [x.sender for x in self.pending_timeouts[tmo_info.round]]
+
+        if tmo_info.sender not in sender_list:
             self.pending_timeouts[tmo_info.round] = self.pending_timeouts[tmo_info.round] + [tmo_info]
-        if len(self.pending_timeouts[tmo_info.round].sender)==f+1:
+        if len(sender_list)==f+1:
             stop_timer(self.current_round)
             self.local_timeout_round()
-        if len(self.pending_timeouts[tmo_info.round].sender)==f*2+1:
+        if len(sender_list)==f*2+1:
             t = TC(
                 round=tmo_info.round,
                 #########
-                tmo_high_qc_rounds=,
-                signatures=)
+                tmo_high_qc_rounds=[x.high_qc.vote_info.round for x in self.pending_timeouts[tmo_info.round]],
+                signatures=[x.signature for x in self.pending_timeouts[tmo_info.round]])
         return None
 
     def advance_round_tc(self,tc):
