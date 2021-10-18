@@ -2,7 +2,10 @@ from ledger import Ledger
 from blocktree import VoteInfo, LedgerCommitInfo, VoteMsg, BlockTree
 from datastructs import TimeoutInfo
 class Safety:
-    def __init__(self, private_key, public_keys, highest_vote_round, highest_qc_round):
+    def __init__(self, block_tree_module, ledger_module,private_key, public_keys, highest_vote_round, highest_qc_round):
+        
+        self.block_tree_module = block_tree_module
+        self.ledger_module = ledger_module
         self.__private_key = private_key # Own private key
         self.__public_keys = public_keys # Public keys of all validators 
         self.__highest_vote_round = highest_vote_round # initially 0
@@ -38,7 +41,7 @@ class Safety:
     def __commit_state_id_candidate(self, block_round, qc):
         # find the committed id in case a qc is formed in the vote round if consecutive(block round, qc.vote info.round) then
         if self.__consecutive(block_round, qc.vote_info.round):
-            return Ledger.pending_state(qc.id) 
+            return self.ledger_module.pending_state(qc.id) 
         else:
             return None
 
@@ -54,9 +57,9 @@ class Safety:
             #VoteInfo carries the potential QC info with ids and rounds of the parent QC
             
             vote_info = VoteInfo(b.id, b.round, b.qc.vote_info.id, qc_round)
-            exec_state_id = Ledger.pending_state(b.id)
+            exec_state_id = self.ledger_module.pending_state(b.id)
             ledger_commit_info = LedgerCommitInfo (self.__commit_state_id_candidate(b.round, b.qc), hash(vote_info)) 
-            return VoteMsg(vote_info, ledger_commit_info, BlockTree.high_commit_qc) 
+            return VoteMsg(vote_info, ledger_commit_info, self.block_tree_module.high_commit_qc) 
         return None
         
     def make_timeout(self, round, high_qc, last_tc):

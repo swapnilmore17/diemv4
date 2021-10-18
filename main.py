@@ -5,14 +5,16 @@ from ledger import Ledger
 from LeaderElection import LeaderElection
 from mempool import Mempool
 from datastructs import ProposalMsg
+from safety import Safety
 class Main:
 
     #wait for next event and call start_event_processing()
 
     def __init__(self):
         self.block_tree = TreeUtility()
-        self.ledger = Ledger()
-        self.pacemaker = Pacemaker(0,None,{})
+        self.ledger = Ledger(self.block_tree)
+        self.safey = Safety(self.block_tree,self.ledger)
+        self.pacemaker = Pacemaker(0,None,{},self.safety,self.block_tree)
         self.mempool=Mempool()
         self.leader_election = LeaderElection()
 

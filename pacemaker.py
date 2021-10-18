@@ -5,17 +5,20 @@ from datastructs import TC
 from safety import Safety
 
 class Pacemaker:
-    def __init__(self,current_round,last_round_tc,pending_timeouts):
+    def __init__(self,current_round,last_round_tc,pending_timeouts,safety_module,block_tree_module):
         self.current_round = current_round
         self.last_round_tc = last_round_tc
         self.pending_timeouts = pending_timeouts
         self.run_done = False
         self.round_done = False
+        self.delta = 10
+        self.safety_module = safety_module
+        self.block_tree_module = block_tree_module
     
-    def get_round_timer(r,delta):
+    def get_round_timer(self,r):
         
         #round timer formula
-        return 4 * delta
+        return 4 * self.delta
 
     def start_timer(self,new_round):
         ######
@@ -35,9 +38,9 @@ class Pacemaker:
         #####
         #save_consensus_state()
         #######
-        timeout_info = Safety.make_timeout(self.current_round,BlockTree.high_qc,self.last_round_tc)
+        timeout_info = self.safety_module.make_timeout(self.current_round,self.block_tree_module.high_qc,self.last_round_tc)
         #######
-        return TimeoutMsg (timeout_info,self.last_round_tc, BlockTree.high_commit_qc)
+        return TimeoutMsg (timeout_info,self.last_round_tc, self.block_tree_module.high_commit_qc)
         #broadcast from da file
 
     def process_remote_timeout_round(self,tmo,f):

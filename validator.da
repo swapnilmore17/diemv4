@@ -7,6 +7,7 @@ import uuid
 import traceback
 from mempool import Mempool
 from pacemaker import Pacemaker
+from main import Main
 
 
 config(channel is {fifo, reliable}, clock is lamport)
@@ -16,6 +17,7 @@ class Validator(process):
     def setup(config, validator_list):
         self.main = Main()
         self.id = config['id']
+        self.validator_list = validator_list
 
     def run():
         main.pacemaker.run_done = False

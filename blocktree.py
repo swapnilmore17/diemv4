@@ -48,7 +48,8 @@ class Block:
 class BlockTree:
 
     ####### initialized in master.da
-    def __init__(self):
+    def __init__(self,ledger_module):
+        self.ledger_module = ledger_module
         
         self.pending_block_tree = TreeUtility()
         
@@ -58,7 +59,7 @@ class BlockTree:
     
     def process_qc(self,qc):
         if qc.ledger_commit_info:
-            ledger_state=Ledger.commit(qc.vote_info.parent_id)
+            ledger_state=self.ledger_module.commit(qc.vote_info.parent_id)
             self.pending_block_tree=self.pending_block_tree.prune(qc.vote_info.parent_id)
             self.high_commit_qc = max(qc.vote_info.round,self.high_commit_qc.vote_info.round)
         self.high_qc = max(qc.vote_info.round,self.high_qc.vote_info.round)
