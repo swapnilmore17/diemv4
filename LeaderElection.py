@@ -36,6 +36,7 @@ class LeaderElection:
     
     def get_leader(self,round):
         if self.reputation_leaders[round]:
-            return self.reputation_leaders[round]
+            lst = list(self.validators)
+            return lst.index(self.reputation_leaders[round])
         index =math.floor(round/2) % len(self.validators)
         return index

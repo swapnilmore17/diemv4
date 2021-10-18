@@ -10,7 +10,8 @@ class Main:
 
     #wait for next event and call start_event_processing()
 
-    def __init__(self,validator_list):
+    def __init__(self,validator_list,validator_index):
+        self.validator_index = validator_index
         self.validator_list = validator_list
         self.block_tree = TreeUtility()
         self.ledger = Ledger(self.block_tree)
@@ -65,7 +66,7 @@ class Main:
         return None
     
     def process_new_round_event(self,last_tc):
-        if self.leader_election.get_leader(self.pacemaker.current_round):
+        if self.leader_election.get_leader(self.pacemaker.current_round)==self.validator_index:
             b = self.block_tree.generate_block(self.mempool.get_transactions(),self.pacemaker.current_round)
             #add author of block
             msg = ProposalMsg(b,last_tc,self.block_tree.high_commit_qc)

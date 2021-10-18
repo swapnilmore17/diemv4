@@ -13,10 +13,11 @@ config(channel is {fifo, reliable}, clock is lamport)
 
 class Validator(process):
 
-    def setup(config, validator_list):
-        self.main = Main(validator_list)
+    def setup(config, validator_list,validator_index):
+        self.main = Main(validator_list,validator_index)
         self.id = config['id']
         self.validator_list = validator_list
+        self.validator_index = validator_index
 
     def run():
         main.pacemaker.run_done = False

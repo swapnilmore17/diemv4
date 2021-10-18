@@ -6,5 +6,5 @@ def main():
         'id':uuid.uuid4()
     }
     validator_set = new(Validator,num=nprocs)
-    for p in validator_set: setup(p,(config,validator_set))
+    for i in range(0,len(validator_set)): setup(validator_set[i],(config,validator_set,i))
     start(validator_set)
