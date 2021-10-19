@@ -59,6 +59,14 @@ class BlockTree:
             )
         self.high_qc=qc
         self.high_commit_qc=qc
+
+    """
+    pending block tree; // tree of blocks pending commitment
+    pending votes; // collected votes per block indexed by their LedgerInfo hash 
+    high qc; // highest known QC
+    high commit qc; // highest QC that serves as a commit certificate
+
+    """
     
     def process_qc(self,qc):
         if qc.ledger_commit_info:
@@ -66,17 +74,41 @@ class BlockTree:
             self.pending_block_tree=self.pending_block_tree.prune(qc.vote_info.parent_id)
             self.high_commit_qc = max(qc.vote_info.round,self.high_commit_qc.vote_info.round)
         self.high_qc = max(qc.vote_info.round,self.high_qc.vote_info.round)
+
+    """
+    Procedure process qc(qc)
+        if qc.ledger commit info.commit state id ̸= ⊥ then
+        Ledger.commit(qc.vote info.parent id)
+        pending block tree.prune(qc.vote info.parent id) // parent id becomes the new root of
+        Pending
+        high commit qc ← maxround {qc, high commit qc} high qc ← maxround{qc, high qc}
+
+    """
     
     def execute_and_insert(self,b):
-        id = Ledger.speculate(b.qc.vote_info.id,b.id,b)
+        id = self.ledger_module.speculate(b.qc.vote_info.id,b.id,b)
         #how to get parent id
         id = self.pending_block_tree.add(b,b.qc.vote_info.id)
         #print(id)
+
+        
+
     
     def generate_block(self,txns,current_round,author):
         #where will author come from
         b = Block(author,current_round,txns,self.high_qc,uuid.uuid4())
         return b
+
+    """
+    Function generate block(txns, current round) 
+        return Block ⟨
+        author ← u,
+        round ← current round,
+        payload ← txns,
+        qc ← high qc,
+        id ← hash(author || round || payload || qc.vote info.id || qc.signatures) ⟩
+
+    """
 
     def process_vote(self,v,f,author):
         self.process_qc(v.high_commit_qc)
@@ -96,6 +128,21 @@ class BlockTree:
             #
             return QC(v.vote_info,commit_info,votes,author)
         return None
+
+        """
+        Function process vote(v)
+            process qc(v.high commit qc)
+            vote idx ← hash(v.ledger commit info)
+            pending votes[vote idx] ← pending votes[vote idx] ∪ v.signature 
+            if |pending votes[vote idx]| = 2f + 1 then
+            qc ←QC ⟨
+                vote info ← v.vote info,
+                state id ← v.state id,
+                votes ← pending votes[vote idx] ⟩
+            return qc
+            return ⊥
+
+        """
 
     
 

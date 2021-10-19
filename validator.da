@@ -68,4 +68,11 @@ class Validator(process):
     def receive(msg=('client_transactions',message)):
         main.mempool.add_transactions(message)
 
+    '''
+    Procedure start event processing(M)
+        if M is a local timeout then Pacemaker.local timeout round() if M is a proposal message then process proposal msg(M)
+        if M is a vote message then process vote msg(M)
+        if M is a timeout message then process timeout message(M)
+'''
+
 

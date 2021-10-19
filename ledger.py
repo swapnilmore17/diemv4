@@ -21,11 +21,14 @@ class Ledger:
         else:
             node_id = self.tree_utility.add(txns, parent_id)
             self.blockid_to_nodeid_mapper[block_id] = node_id
+
+        output('Added new block')
         return block_id 
 
     # Returns Ledger State/ Commit ID based on Block ID
     def pending_state(self, block_id):
         #print('1')
+        
         return self.blockid_to_commitid_mapper[block_id]
 
     # Commits block to persistent ledger and returns ledger state/ commit ID
@@ -42,7 +45,7 @@ class Ledger:
             pickle.dump(self.ledger_state, ledgerfile) # Store ledger state into ledger
             pickle.dump(node.data, ledgerfile) # Store payload into ledger
             self.tree_utility.commit(node_id) #Remove uncommitted sibling branches
-
+            output('Commited block')
             return str(self.ledger_state)
         return ''
 

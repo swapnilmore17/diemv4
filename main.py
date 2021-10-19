@@ -30,6 +30,13 @@ class Main:
         self.leader_election.update_leaders(qc)
         self.pacemaker.advance_round_qc(qc.vote_info.round)
 
+        """
+        Procedure process certificate qc(qc) 
+            Block-Tree.process qc(qc) 
+            LeaderElection.update leaders(qc) 
+            Pacemaker.advance round(qc.vote info.round)
+        """
+
     def process_proposal_message(self,p,current_round):
         #print('main')
         self.process_certificate_qc(p.block.qc)
@@ -48,6 +55,31 @@ class Main:
             #next_leader = self.validator_list[next_leader_index]
             return (vote_msg,next_leader_index)
         return None
+
+        """
+        Procedure process proposal msg(P)
+            process certificate qc(P.block.qc)
+            process certificate qc(P.high commit qc) 
+            Pacemaker.advance round tc(P.last round tc) 
+            round ← Pacemaker.current round
+            leader ← LeaderElection.get leader(current round)
+            if P.block.round ̸= round ∨ P.sender ̸= leader ∨ P.block.author ̸= leader then
+            Return
+            Block-Tree.execute and insert(P) // Adds a new speculative state to the Ledger 
+            vote msg ← Safety.make vote(P.block, P.last round tc)
+            if vote msg ̸= ⊥ then
+            send vote msg to LeaderElection.get leader(current round + 1)
+
+            Procedure process timeout msg(M)
+            process certificate qc(M.tmo info.high qc) 
+            process certificate qc(M.high commit qc) 	
+            Pacemaker.advance round tc(M.last round tc) 
+            tc ← Pacemaker.process remote timeout(M)
+            if tc ̸= ⊥ then
+            Pacemaker.advance round(tc) 
+            process new round event(tc)
+
+        """
         
 
     def process_timeout_message(self,m,f):
@@ -72,6 +104,15 @@ class Main:
             msg = self.process_new_round_event(None)
             return msg
         return None
+
+        """
+        Procedure process vote msg(M)
+            qc ← Block-Tree.process vote(M) 
+            if qc ̸= ⊥ then
+            process certificate qc(qc) 
+            process new round event(⊥)
+
+        """
         
     
     def process_new_round_event(self,last_tc):
@@ -82,6 +123,15 @@ class Main:
             msg = ProposalMsg(b,last_tc,self.block_tree.high_commit_qc)
             return msg 
         return None
+
+        """
+        Procedure process new round event(last tc)
+            if u = LeaderElection.get leader(Pacemaker.current round) then
+                            // Leader code:  generate proposal.
+            b ← Block-Tree.generate block( MemPool.get transactions(), Pacemaker.current  round )
+            broadcast ProposalMsg⟨b,lasttc,Block-Tree.highcommitqc⟩
+
+        """
         
 
 

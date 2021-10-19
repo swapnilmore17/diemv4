@@ -24,8 +24,7 @@ def main():
     for i in range(len(validator_list)): 
         setup(validator_list[i],[validator_set_id[i],validator_set,i,f_nodes])
     start(validator_set)
-
-    client_config = {}
+    #client_config = {}
     
     client = new(Client)
     setup(client,[uuid.uuid4(),validator_list,f_nodes,n_messages])
@@ -42,5 +41,4 @@ def main():
     
     first_proposal = ProposalMsg(block,last_round_tc,high_commit_qc)
     for x in validator_set:
-        send(('proposal_message',first_proposal),to=x)    
-'''
+        send(('proposal_message',first_proposal),to=x)  '''  
