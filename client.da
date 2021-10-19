@@ -4,6 +4,7 @@ class Client(process):
         self.client_id = id
         self.validators_list = validators_list
         self.f_nodes = f_nodes
+        self.n_messages=n_messages
 
     def run():
 

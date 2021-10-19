@@ -25,13 +25,13 @@ class Main:
     #def start_event_processing(self,message,current_round, leader,f):
 
     def process_certificate_qc(self,qc):
-        print('main')
+        #print('main')
         self.block_tree.process_qc(qc)
         self.leader_election.update_leaders(qc)
         self.pacemaker.advance_round_qc(qc.vote_info.round)
 
     def process_proposal_message(self,p,current_round):
-        print('main')
+        #print('main')
         self.process_certificate_qc(p.block.qc)
         self.process_certificate_qc(p.high_commit)
         self.pacemaker.advance_round_tc(p.last_round_tc)
@@ -51,7 +51,7 @@ class Main:
         
 
     def process_timeout_message(self,m,f):
-        print('main')
+        #print('main')
         self.process_certificate_qc(m.tmo_info.high_qc)
         self.process_certificate_qc(m.high_commit_qc)
         self.pacemaker.advance_round_tc(m.last_round_tc)
@@ -65,7 +65,7 @@ class Main:
 
 
     def process_vote_message(self,m):
-        print('main')
+        #print('main')
         qc = self.block_tree.process_vote(m,self.f_nodes,self.validator_list[self.validator_index])
         if qc:
             self.process_certificate_qc(qc)
@@ -75,7 +75,7 @@ class Main:
         
     
     def process_new_round_event(self,last_tc):
-        print('main')
+        #print('main')
         if self.leader_election.get_leader(self.pacemaker.current_round)==self.validator_index:
             b = self.block_tree.generate_block(self.mempool.get_transactions(),self.pacemaker.current_round)
             #add author of block

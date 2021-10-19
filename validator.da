@@ -11,14 +11,16 @@ from main import Main
 class Validator(process):
 
     def setup(id, validator_list,validator_index,f_nodes):
-        
-        self.main = Main(validator_list,validator_index,f_nodes)
-        self.validator_id = id
-        self.validator_list = validator_list
-        self.validator_index = validator_index
-        self.f_nodes=f_nodes
-        
-            #traceback.print_exc()
+        try:
+
+            self.main = Main(validator_list,validator_index,f_nodes)
+            self.validator_id = id
+            self.validator_list = validator_list
+            self.validator_index = validator_index
+            self.f_nodes=f_nodes
+        except:
+            
+            traceback.print_exc()
 
     def run():
         
@@ -32,8 +34,8 @@ class Validator(process):
             main.pacemaker.round_done = False
             timer_duration = main.pacemaker.get_round_timer(main.pacemaker.current_round)
             if await(main.pacemaker.round_done): pass
-            elif timeout (timer_duration): main.pacemaker.local_timeout_round()
-        print(True)
+            elif timeout(timer_duration): main.pacemaker.local_timeout_round()
+        #print(True)
 
     #wait for next event and call event processing
     '''def receive(msg=('done',),from_=p):

@@ -71,6 +71,7 @@ class BlockTree:
         id = Ledger.speculate(b.qc.vote_info.id,b.id,b)
         #how to get parent id
         id = self.pending_block_tree.add(b,b.qc.vote_info.id)
+        #print(id)
     
     def generate_block(self,txns,current_round,author):
         #where will author come from
