@@ -30,7 +30,7 @@ Round timer = 4 * delta,  where delta = 10 seconds
 
 ## Bugs and Limitations
 
-No bugs and limitations obsereved.
+Program is going into an infinite loop in early iterations. We haven't implemented the genenis block generation code.
 
 ## Main Files
 
