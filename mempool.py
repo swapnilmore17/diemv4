@@ -1,9 +1,9 @@
 class Mempool:
     def __init__(self):
-         
-         self.transactions = []
 
-    def add_transactions(self,txn):
+        self.transactions = []
+
+    def add_transactions(self, txn):
 
         self.transactions.append(txn)
 
@@ -11,6 +11,3 @@ class Mempool:
 
         element = self.transactions.pop(0)
         return element
-
-
-    

@@ -1,4 +1,6 @@
 from treelib import Tree, Node
+
+
 class TreeUtility:
     def __init__(self):
         self.tree = Tree()
@@ -12,7 +14,7 @@ class TreeUtility:
 
     def get_node(self, node_id):
         return self.tree.get_node(node_id)
-    
+
     def prune(self, node_id):
         tree = self.tree.remove_subtree(node_id)
         return tree
