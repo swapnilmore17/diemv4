@@ -1,16 +1,15 @@
 class Client(process):
 
     def setup(id,validators_list,f_nodes,n_messages):
-        self.id = id
+        self.client_id = id
         self.validators_list = validators_list
         self.f_nodes = f_nodes
 
     def run():
 
         for i in range(n_messages):
-            message = 'Client 1' + ' - ' + 'message' + i
-            send(('client_transactions',message),to=validators_list)
-            if await(len(setof(received(('done',))))) > f_nodes+1:
-                output('Message '+i+' done')
+            for j in range(len(validators_list)):
+                message = 'Client 1' + ' - ' + 'message' + str(i)
+                send(('client_transactions',message),to=validators_list[j])
 
-    def receive():
+    #def receive(msg=('done',from_=p)):

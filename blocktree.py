@@ -31,9 +31,6 @@ class QC:
         self.ledger_commit_info = ledger_commit_info
         self.signatures = signatures
         self.author = author
-        #####
-        #####
-        ####
         self.author_signature = str(author)
 
 #checked with function call
@@ -54,8 +51,14 @@ class BlockTree:
         self.pending_block_tree = TreeUtility()
         
         self.pending_votes={}
-        self.high_qc=None
-        self.high_commit_qc=None
+        qc = QC(
+            VoteInfo(0,0,0,0,0),
+            LedgerCommitInfo('str','str'),
+            [],
+            'str'
+            )
+        self.high_qc=qc
+        self.high_commit_qc=qc
     
     def process_qc(self,qc):
         if qc.ledger_commit_info:

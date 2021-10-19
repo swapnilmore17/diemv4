@@ -2,14 +2,14 @@ from ledger import Ledger
 from blocktree import VoteInfo, LedgerCommitInfo, VoteMsg, BlockTree
 from datastructs import TimeoutInfo
 class Safety:
-    def __init__(self, block_tree_module, ledger_module, highest_vote_round, highest_qc_round):
+    def __init__(self, block_tree_module, ledger_module, highest_vote_round):
         
         self.block_tree_module = block_tree_module
         self.ledger_module = ledger_module
         #self.__private_key = private_key # Own private key
         #self.__public_keys = public_keys # Public keys of all validators
         self.__highest_vote_round = highest_vote_round # initially 0
-        self.__highest_qc_round = highest_qc_round #trying 0
+        self.__highest_qc_round = None #trying 0
 
     def __increase_highest_vote_round(self, round):
         # commit not to vote in rounds lower than round
@@ -50,7 +50,7 @@ class Safety:
 
     def make_vote(self, b, last_tc):
         qc_round = b.qc.vote_info.round
-        if self.__valid_signatures(b, last_tc) and self.__safe_to_vote(b.round, qc_round, last_tc):
+        if self.__valid_signatures() and self.__safe_to_vote(b.round, qc_round, last_tc):
             self.__update_highest_qc_round(qc_round) # Protect qc round
             self.__increase_highest_vote_round(b.round) # Don’t vote again in this (or lower) round
             #VoteInfo carries the potential QC info with ids and rounds of the parent QC
@@ -62,7 +62,7 @@ class Safety:
         
     def make_timeout(self, round, high_qc, last_tc):
         qc_round = high_qc.vote_info.round
-        if self.__valid_signatures(high_qc, last_tc) and self.__safe_to_timeout(round, qc_round, last_tc):
+        if self.__valid_signatures() and self.__safe_to_timeout(round, qc_round, last_tc):
             self.__increase_highest_vote_round(round) # Stop voting for round
             return TimeoutInfo(round, high_qc)
         return None

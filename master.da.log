@@ -1,0 +1,706 @@
+[2021-10-18 21:47:05,912] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:05,912] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 55328)
+[2021-10-18 21:47:05,912] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 17029)
+[2021-10-18 21:47:05,912] da.api<MainProcess>:INFO: <Node_:c4c01> initialized at 127.0.0.1:(UdpTransport=55328, TcpTransport=17029).
+[2021-10-18 21:47:05,912] da.api<MainProcess>:INFO: Starting program <module 'master' from './master.da'>...
+[2021-10-18 21:47:05,912] da.api<MainProcess>:INFO: Running iteration 1 ...
+[2021-10-18 21:47:05,913] da.transport.manager.TransportManager<MainProcess>:DEBUG: Starting...
+[2021-10-18 21:47:05,913] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[2021-10-18 21:47:05,913] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport started.
+[2021-10-18 21:47:05,913] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport started.
+[2021-10-18 21:47:05,913] da.sim.Router<MainProcess>:DEBUG: Process <Node_:c4c01> registered.
+[2021-10-18 21:47:05,913] da.sim.OSThreadContainer<MainProcess>:DEBUG: Process object initialized.
+[2021-10-18 21:47:05,913] master.Node_<Node_:c4c01>:DEBUG: Creating instances of <class 'validator.Validator'> using 'process'
+[2021-10-18 21:47:05,913] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:05,913] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 51293)
+[2021-10-18 21:47:05,913] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 21033)
+[2021-10-18 21:47:05,919] da.transport.manager.TransportManager<OSProcessContainer-1>:DEBUG: Starting...
+[2021-10-18 21:47:05,920] da.transport.sock.UdpTransport<OSProcessContainer-1>:DEBUG: Transport started.
+[2021-10-18 21:47:05,920] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: Transport started.
+[2021-10-18 21:47:05,920] da.sim.Router<OSProcessContainer-1>:DEBUG: Process <Validator:c0402> registered.
+[2021-10-18 21:47:05,921] da.sim.OSProcessContainer<OSProcessContainer-1>:DEBUG: Process object initialized.
+[2021-10-18 21:47:05,921] validator.Validator<Validator:c0402>:DEBUG: Delayed start.
+[2021-10-18 21:47:05,921] da.sim.Router<OSProcessContainer-1>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (0, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:05,922] da.sim.Router<OSProcessContainer-1>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (0, None))(198 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:21033)>.
+[2021-10-18 21:47:05,922] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,923] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51084).
+[2021-10-18 21:47:05,924] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:05,924] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: =========answering b'#KY#\x01\x01\x00\xc8\xd2Z\xecJ\xfb\xdf*\x81\x1bm\xf5\xdd\xa4\xaa\xaa\xf1\x00\xff\xfbA'
+[2021-10-18 21:47:05,925] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,925] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51084).
+[2021-10-18 21:47:05,925] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:05,925] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: Sent 206 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,925] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 206/8192 bytes received from ('127.0.0.1', 21033).
+[2021-10-18 21:47:05,926] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:05,926] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0402> to <Node_:c4c01>: (<Command.NewAck: 16>, (0, None))
+[2021-10-18 21:47:05,942] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:05,942] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:05,942] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:05,942] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:05,942] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:05,942] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 33592)
+[2021-10-18 21:47:05,942] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 20514)
+[2021-10-18 21:47:05,947] da.transport.manager.TransportManager<OSProcessContainer-2>:DEBUG: Starting...
+[2021-10-18 21:47:05,947] da.transport.sock.UdpTransport<OSProcessContainer-2>:DEBUG: Transport started.
+[2021-10-18 21:47:05,948] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: Transport started.
+[2021-10-18 21:47:05,948] da.sim.Router<OSProcessContainer-2>:DEBUG: Process <Validator:c0403> registered.
+[2021-10-18 21:47:05,949] da.sim.OSProcessContainer<OSProcessContainer-2>:DEBUG: Process object initialized.
+[2021-10-18 21:47:05,949] validator.Validator<Validator:c0403>:DEBUG: Delayed start.
+[2021-10-18 21:47:05,949] da.sim.Router<OSProcessContainer-2>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (0, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:05,950] da.sim.Router<OSProcessContainer-2>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (0, None))(198 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:20514)>.
+[2021-10-18 21:47:05,950] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,951] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51085).
+[2021-10-18 21:47:05,952] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:05,952] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: =========answering b'#KY#\x01\x01\x00\xc8\xdd\x0cc+\xa2\x1c>:\xa5v>H\xe8\xe2\x81\x81"\x02\x17 '
+[2021-10-18 21:47:05,953] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,953] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51085).
+[2021-10-18 21:47:05,953] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:05,953] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 206/8192 bytes received from ('127.0.0.1', 20514).
+[2021-10-18 21:47:05,953] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: Sent 206 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,953] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:05,954] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0403> to <Node_:c4c01>: (<Command.NewAck: 16>, (0, None))
+[2021-10-18 21:47:05,957] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:05,957] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:05,957] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:05,957] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:05,957] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:05,958] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 55732)
+[2021-10-18 21:47:05,958] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 28679)
+[2021-10-18 21:47:05,962] da.transport.manager.TransportManager<OSProcessContainer-3>:DEBUG: Starting...
+[2021-10-18 21:47:05,963] da.transport.sock.UdpTransport<OSProcessContainer-3>:DEBUG: Transport started.
+[2021-10-18 21:47:05,963] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: Transport started.
+[2021-10-18 21:47:05,963] da.sim.Router<OSProcessContainer-3>:DEBUG: Process <Validator:c0404> registered.
+[2021-10-18 21:47:05,964] da.sim.OSProcessContainer<OSProcessContainer-3>:DEBUG: Process object initialized.
+[2021-10-18 21:47:05,964] validator.Validator<Validator:c0404>:DEBUG: Delayed start.
+[2021-10-18 21:47:05,964] da.sim.Router<OSProcessContainer-3>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (0, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:05,965] da.sim.Router<OSProcessContainer-3>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (0, None))(198 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:28679)>.
+[2021-10-18 21:47:05,965] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,966] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51086).
+[2021-10-18 21:47:05,966] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:05,966] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: =========answering b'#KY#\x01\x01\x00\xc80*\xd2cWU/\x82.GC\xe0\x16-Y\xa6\x86\xf1\x1c\xf2'
+[2021-10-18 21:47:05,967] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51086).
+[2021-10-18 21:47:05,967] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,967] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:05,967] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 206/8192 bytes received from ('127.0.0.1', 28679).
+[2021-10-18 21:47:05,967] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: Sent 206 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,967] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:05,968] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0404> to <Node_:c4c01>: (<Command.NewAck: 16>, (0, None))
+[2021-10-18 21:47:05,973] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:05,973] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:05,973] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:05,973] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:05,973] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:05,973] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 34406)
+[2021-10-18 21:47:05,973] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 16001)
+[2021-10-18 21:47:05,977] da.transport.manager.TransportManager<OSProcessContainer-4>:DEBUG: Starting...
+[2021-10-18 21:47:05,978] da.transport.sock.UdpTransport<OSProcessContainer-4>:DEBUG: Transport started.
+[2021-10-18 21:47:05,979] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: Transport started.
+[2021-10-18 21:47:05,979] da.sim.Router<OSProcessContainer-4>:DEBUG: Process <Validator:c0405> registered.
+[2021-10-18 21:47:05,979] da.sim.OSProcessContainer<OSProcessContainer-4>:DEBUG: Process object initialized.
+[2021-10-18 21:47:05,980] validator.Validator<Validator:c0405>:DEBUG: Delayed start.
+[2021-10-18 21:47:05,980] da.sim.Router<OSProcessContainer-4>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (0, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:05,980] da.sim.Router<OSProcessContainer-4>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (0, None))(198 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:16001)>.
+[2021-10-18 21:47:05,980] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,981] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51087).
+[2021-10-18 21:47:05,982] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:05,982] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: =========answering b'#KY#\x01\x01\x00\xc8\xcb\x92\xad]\x9d\xae\x9aO\nV\x93\xa7L\xc6O\x11\xbf\x83r\xde'
+[2021-10-18 21:47:05,982] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51087).
+[2021-10-18 21:47:05,982] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,982] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:05,983] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 206/8192 bytes received from ('127.0.0.1', 16001).
+[2021-10-18 21:47:05,983] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: Sent 206 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,983] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:05,983] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0405> to <Node_:c4c01>: (<Command.NewAck: 16>, (0, None))
+[2021-10-18 21:47:05,988] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:05,988] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:05,989] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:05,989] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:05,989] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:05,989] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 44513)
+[2021-10-18 21:47:05,989] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 13196)
+[2021-10-18 21:47:05,993] da.transport.manager.TransportManager<OSProcessContainer-5>:DEBUG: Starting...
+[2021-10-18 21:47:05,994] da.transport.sock.UdpTransport<OSProcessContainer-5>:DEBUG: Transport started.
+[2021-10-18 21:47:05,994] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: Transport started.
+[2021-10-18 21:47:05,994] da.sim.Router<OSProcessContainer-5>:DEBUG: Process <Validator:c0406> registered.
+[2021-10-18 21:47:05,995] da.sim.OSProcessContainer<OSProcessContainer-5>:DEBUG: Process object initialized.
+[2021-10-18 21:47:05,995] validator.Validator<Validator:c0406>:DEBUG: Delayed start.
+[2021-10-18 21:47:05,995] da.sim.Router<OSProcessContainer-5>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (0, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:05,996] da.sim.Router<OSProcessContainer-5>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (0, None))(198 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:13196)>.
+[2021-10-18 21:47:05,996] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,997] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51088).
+[2021-10-18 21:47:05,997] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:05,997] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: =========answering b'#KY#\x01\x01\x00\xc8L\xb6\xdc\xda\xe8\xa3\xbf\xc4\x9a\x8d8\x1fp\xaf\xd2\xd6\xbf\xe0\xb0U'
+[2021-10-18 21:47:05,998] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51088).
+[2021-10-18 21:47:05,998] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,998] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:05,998] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 206/8192 bytes received from ('127.0.0.1', 13196).
+[2021-10-18 21:47:05,998] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:05,998] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: Sent 206 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:05,999] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0406> to <Node_:c4c01>: (<Command.NewAck: 16>, (0, None))
+[2021-10-18 21:47:06,004] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:06,004] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,004] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,004] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:06,004] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:06,004] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 33191)
+[2021-10-18 21:47:06,004] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 11947)
+[2021-10-18 21:47:06,009] da.transport.manager.TransportManager<OSProcessContainer-6>:DEBUG: Starting...
+[2021-10-18 21:47:06,009] da.transport.sock.UdpTransport<OSProcessContainer-6>:DEBUG: Transport started.
+[2021-10-18 21:47:06,010] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: Transport started.
+[2021-10-18 21:47:06,010] da.sim.Router<OSProcessContainer-6>:DEBUG: Process <Validator:c0407> registered.
+[2021-10-18 21:47:06,011] da.sim.OSProcessContainer<OSProcessContainer-6>:DEBUG: Process object initialized.
+[2021-10-18 21:47:06,011] validator.Validator<Validator:c0407>:DEBUG: Delayed start.
+[2021-10-18 21:47:06,011] da.sim.Router<OSProcessContainer-6>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (0, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,012] da.sim.Router<OSProcessContainer-6>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (0, None))(198 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:11947)>.
+[2021-10-18 21:47:06,012] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,013] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51089).
+[2021-10-18 21:47:06,013] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:06,013] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: =========answering b'#KY#\x01\x01\x00\xc8>\xc6\xf3\xea\xee\xfb3\x16\xc4\xa3\xf5\x8f\x93\xf7[\x16\xa5\x1d\xaeA'
+[2021-10-18 21:47:06,014] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51089).
+[2021-10-18 21:47:06,013] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,014] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:06,014] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 206/8192 bytes received from ('127.0.0.1', 11947).
+[2021-10-18 21:47:06,014] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: Sent 206 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,014] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,014] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0407> to <Node_:c4c01>: (<Command.NewAck: 16>, (0, None))
+[2021-10-18 21:47:06,020] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:06,020] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,020] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,020] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:06,020] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:06,020] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 12380)
+[2021-10-18 21:47:06,020] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 50979)
+[2021-10-18 21:47:06,024] da.transport.manager.TransportManager<OSProcessContainer-7>:DEBUG: Starting...
+[2021-10-18 21:47:06,025] da.transport.sock.UdpTransport<OSProcessContainer-7>:DEBUG: Transport started.
+[2021-10-18 21:47:06,025] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: Transport started.
+[2021-10-18 21:47:06,026] da.sim.Router<OSProcessContainer-7>:DEBUG: Process <Validator:c0408> registered.
+[2021-10-18 21:47:06,026] da.sim.OSProcessContainer<OSProcessContainer-7>:DEBUG: Process object initialized.
+[2021-10-18 21:47:06,027] validator.Validator<Validator:c0408>:DEBUG: Delayed start.
+[2021-10-18 21:47:06,027] da.sim.Router<OSProcessContainer-7>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (0, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,027] da.sim.Router<OSProcessContainer-7>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (0, None))(198 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:50979)>.
+[2021-10-18 21:47:06,027] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,028] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51090).
+[2021-10-18 21:47:06,029] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:06,029] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: =========answering b"#KY#\x01\x01\x00\xc8\x8e\xa3.\xfc\x0e\xb8\x0c\xc9\x88\x93wMg'\xa8\x83HH)8"
+[2021-10-18 21:47:06,029] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51090).
+[2021-10-18 21:47:06,029] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,029] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:06,030] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 206/8192 bytes received from ('127.0.0.1', 50979).
+[2021-10-18 21:47:06,030] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: Sent 206 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,030] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,030] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0408> to <Node_:c4c01>: (<Command.NewAck: 16>, (0, None))
+[2021-10-18 21:47:06,035] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:06,035] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,035] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,035] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:06,035] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:06,036] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 49488)
+[2021-10-18 21:47:06,036] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 19966)
+[2021-10-18 21:47:06,041] da.transport.manager.TransportManager<OSProcessContainer-8>:DEBUG: Starting...
+[2021-10-18 21:47:06,042] da.transport.sock.UdpTransport<OSProcessContainer-8>:DEBUG: Transport started.
+[2021-10-18 21:47:06,042] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: Transport started.
+[2021-10-18 21:47:06,042] da.sim.Router<OSProcessContainer-8>:DEBUG: Process <Validator:c0409> registered.
+[2021-10-18 21:47:06,043] da.sim.OSProcessContainer<OSProcessContainer-8>:DEBUG: Process object initialized.
+[2021-10-18 21:47:06,043] validator.Validator<Validator:c0409>:DEBUG: Delayed start.
+[2021-10-18 21:47:06,043] da.sim.Router<OSProcessContainer-8>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (0, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,044] da.sim.Router<OSProcessContainer-8>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (0, None))(198 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:19966)>.
+[2021-10-18 21:47:06,044] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,045] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51091).
+[2021-10-18 21:47:06,046] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:06,046] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: =========answering b'#KY#\x01\x01\x00\xc8\xd5\x9a\xdb\x9d\xdc\x03|j\xb2L\xf5\x98\x19\x0cM\x99\x15\\;\xe2'
+[2021-10-18 21:47:06,046] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51091).
+[2021-10-18 21:47:06,046] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,046] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:06,046] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 206/8192 bytes received from ('127.0.0.1', 19966).
+[2021-10-18 21:47:06,047] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,046] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: Sent 206 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,047] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0409> to <Node_:c4c01>: (<Command.NewAck: 16>, (0, None))
+[2021-10-18 21:47:06,051] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:06,052] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,052] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,052] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:06,052] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:06,052] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 48214)
+[2021-10-18 21:47:06,052] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 42001)
+[2021-10-18 21:47:06,056] da.transport.manager.TransportManager<OSProcessContainer-9>:DEBUG: Starting...
+[2021-10-18 21:47:06,057] da.transport.sock.UdpTransport<OSProcessContainer-9>:DEBUG: Transport started.
+[2021-10-18 21:47:06,057] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: Transport started.
+[2021-10-18 21:47:06,058] da.sim.Router<OSProcessContainer-9>:DEBUG: Process <Validator:c040a> registered.
+[2021-10-18 21:47:06,058] da.sim.OSProcessContainer<OSProcessContainer-9>:DEBUG: Process object initialized.
+[2021-10-18 21:47:06,059] validator.Validator<Validator:c040a>:DEBUG: Delayed start.
+[2021-10-18 21:47:06,059] da.sim.Router<OSProcessContainer-9>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (0, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,059] da.sim.Router<OSProcessContainer-9>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (0, None))(198 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:42001)>.
+[2021-10-18 21:47:06,059] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,060] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51092).
+[2021-10-18 21:47:06,061] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:06,061] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: =========answering b'#KY#\x01\x01\x00\xc8\xcd\x1f\x1e,\xb9`Y\x96\x855i\xa4*\xd7p\xec\xa6_\xa6\xb2'
+[2021-10-18 21:47:06,062] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51092).
+[2021-10-18 21:47:06,061] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,062] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:06,062] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 206/8192 bytes received from ('127.0.0.1', 42001).
+[2021-10-18 21:47:06,062] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: Sent 206 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,062] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,062] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c040a> to <Node_:c4c01>: (<Command.NewAck: 16>, (0, None))
+[2021-10-18 21:47:06,067] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:06,067] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,067] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,067] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:06,067] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:06,067] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 21051)
+[2021-10-18 21:47:06,068] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 14699)
+[2021-10-18 21:47:06,075] da.transport.manager.TransportManager<OSProcessContainer-10>:DEBUG: Starting...
+[2021-10-18 21:47:06,076] da.transport.sock.UdpTransport<OSProcessContainer-10>:DEBUG: Transport started.
+[2021-10-18 21:47:06,077] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: Transport started.
+[2021-10-18 21:47:06,077] da.sim.Router<OSProcessContainer-10>:DEBUG: Process <Validator:c040b> registered.
+[2021-10-18 21:47:06,078] da.sim.OSProcessContainer<OSProcessContainer-10>:DEBUG: Process object initialized.
+[2021-10-18 21:47:06,078] validator.Validator<Validator:c040b>:DEBUG: Delayed start.
+[2021-10-18 21:47:06,078] da.sim.Router<OSProcessContainer-10>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (0, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,078] da.sim.Router<OSProcessContainer-10>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (0, None))(198 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:14699)>.
+[2021-10-18 21:47:06,079] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,080] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51093).
+[2021-10-18 21:47:06,080] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:06,080] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: =========answering b'#KY#\x01\x01\x00\xc8"&\xc8{\xc5c\x8cHG\xc2\x8b\xb2\x12F\xa1\xf1N3\xa3\xe7'
+[2021-10-18 21:47:06,081] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,081] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:06,081] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51093).
+[2021-10-18 21:47:06,081] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: Sent 206 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,082] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 206/8192 bytes received from ('127.0.0.1', 14699).
+[2021-10-18 21:47:06,082] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,082] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c040b> to <Node_:c4c01>: (<Command.NewAck: 16>, (0, None))
+[2021-10-18 21:47:06,083] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:06,083] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,083] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,083] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:06,083] da.sim.OSThreadContainer<MainProcess>:DEBUG: 10 instances of Validator created.
+[2021-10-18 21:47:06,083] master.Node_<Node_:c4c01>:DEBUG: 10 instances of <class 'validator.Validator'> created: [<Validator:c0402>, <Validator:c0403>, <Validator:c0404>, <Validator:c0405>, <Validator:c0406>, <Validator:c0407>, <Validator:c0408>, <Validator:c0409>, <Validator:c040a>, <Validator:c040b>]
+[2021-10-18 21:47:06,083] master.Node_<Node_:c4c01>:DEBUG: All children acked.
+[2021-10-18 21:47:06,084] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (1, [UUID('705f2ee1-1a7d-4750-9c99-8d6bfd751a8f'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 0, 3])) to <Validator:c0406> with flags=3
+[2021-10-18 21:47:06,084] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (1, [UUID('705f2ee1-1a7d-4750-9c99-8d6bfd751a8f'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 0, 3]))(654 bytes) to <Validator:c0406> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,084] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 662 bytes to ('127.0.0.1', 13196).
+[2021-10-18 21:47:06,084] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: 662/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,085] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,085] da.sim.Router<OSProcessContainer-5>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0406>: (<Command.Setup: 2>, (1, [UUID('705f2ee1-1a7d-4750-9c99-8d6bfd751a8f'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 0, 3]))
+[2021-10-18 21:47:06,086] validator.Validator<Validator:c0406>:DEBUG: Running `setup` with args (1, [UUID('705f2ee1-1a7d-4750-9c99-8d6bfd751a8f'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 0, 3]).
+[2021-10-18 21:47:06,086] validator.Validator<Validator:c0406>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,086] da.sim.Router<OSProcessContainer-5>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (1, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,087] da.sim.Router<OSProcessContainer-5>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (1, True))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:13196)>.
+[2021-10-18 21:47:06,087] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,087] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 13196).
+[2021-10-18 21:47:06,087] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,087] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0406> to <Node_:c4c01>: (<Command.SetupAck: 12>, (1, True))
+[2021-10-18 21:47:06,087] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (2, [UUID('1c57ac2a-f311-4a5f-9195-dd610ba7f994'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 1, 3])) to <Validator:c0405> with flags=3
+[2021-10-18 21:47:06,087] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (2, [UUID('1c57ac2a-f311-4a5f-9195-dd610ba7f994'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 1, 3]))(654 bytes) to <Validator:c0405> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,087] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 662 bytes to ('127.0.0.1', 16001).
+[2021-10-18 21:47:06,088] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: 662/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,088] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,088] da.sim.Router<OSProcessContainer-4>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0405>: (<Command.Setup: 2>, (2, [UUID('1c57ac2a-f311-4a5f-9195-dd610ba7f994'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 1, 3]))
+[2021-10-18 21:47:06,089] validator.Validator<Validator:c0405>:DEBUG: Running `setup` with args (2, [UUID('1c57ac2a-f311-4a5f-9195-dd610ba7f994'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 1, 3]).
+[2021-10-18 21:47:06,089] validator.Validator<Validator:c0405>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,089] da.sim.Router<OSProcessContainer-4>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (2, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,090] da.sim.Router<OSProcessContainer-4>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (2, True))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:16001)>.
+[2021-10-18 21:47:06,090] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 16001).
+[2021-10-18 21:47:06,090] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,090] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,090] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0405> to <Node_:c4c01>: (<Command.SetupAck: 12>, (2, True))
+[2021-10-18 21:47:06,090] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (3, [UUID('a8810498-9bb2-4cbf-b047-c11c05fcb945'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 2, 3])) to <Validator:c0404> with flags=3
+[2021-10-18 21:47:06,090] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (3, [UUID('a8810498-9bb2-4cbf-b047-c11c05fcb945'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 2, 3]))(655 bytes) to <Validator:c0404> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,090] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 663 bytes to ('127.0.0.1', 28679).
+[2021-10-18 21:47:06,091] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: 663/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,091] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,091] da.sim.Router<OSProcessContainer-3>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0404>: (<Command.Setup: 2>, (3, [UUID('a8810498-9bb2-4cbf-b047-c11c05fcb945'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 2, 3]))
+[2021-10-18 21:47:06,092] validator.Validator<Validator:c0404>:DEBUG: Running `setup` with args (3, [UUID('a8810498-9bb2-4cbf-b047-c11c05fcb945'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 2, 3]).
+[2021-10-18 21:47:06,092] validator.Validator<Validator:c0404>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,092] da.sim.Router<OSProcessContainer-3>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (3, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,093] da.sim.Router<OSProcessContainer-3>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (3, True))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:28679)>.
+[2021-10-18 21:47:06,093] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,093] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 28679).
+[2021-10-18 21:47:06,093] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,093] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0404> to <Node_:c4c01>: (<Command.SetupAck: 12>, (3, True))
+[2021-10-18 21:47:06,093] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (4, [UUID('821ea3df-afac-484f-a238-a27e94581e1f'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 3, 3])) to <Validator:c0408> with flags=3
+[2021-10-18 21:47:06,093] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (4, [UUID('821ea3df-afac-484f-a238-a27e94581e1f'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 3, 3]))(655 bytes) to <Validator:c0408> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,094] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 663 bytes to ('127.0.0.1', 50979).
+[2021-10-18 21:47:06,094] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: 663/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,094] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,095] da.sim.Router<OSProcessContainer-7>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0408>: (<Command.Setup: 2>, (4, [UUID('821ea3df-afac-484f-a238-a27e94581e1f'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 3, 3]))
+[2021-10-18 21:47:06,095] validator.Validator<Validator:c0408>:DEBUG: Running `setup` with args (4, [UUID('821ea3df-afac-484f-a238-a27e94581e1f'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 3, 3]).
+[2021-10-18 21:47:06,096] validator.Validator<Validator:c0408>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,096] da.sim.Router<OSProcessContainer-7>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (4, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,096] da.sim.Router<OSProcessContainer-7>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (4, True))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:50979)>.
+[2021-10-18 21:47:06,096] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,097] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 50979).
+[2021-10-18 21:47:06,097] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,097] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0408> to <Node_:c4c01>: (<Command.SetupAck: 12>, (4, True))
+[2021-10-18 21:47:06,097] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (5, [UUID('5d57a475-7979-474f-9e81-bf324c94fad9'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 4, 3])) to <Validator:c0403> with flags=3
+[2021-10-18 21:47:06,097] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (5, [UUID('5d57a475-7979-474f-9e81-bf324c94fad9'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 4, 3]))(654 bytes) to <Validator:c0403> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,097] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 662 bytes to ('127.0.0.1', 20514).
+[2021-10-18 21:47:06,097] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: 662/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,098] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,098] da.sim.Router<OSProcessContainer-2>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0403>: (<Command.Setup: 2>, (5, [UUID('5d57a475-7979-474f-9e81-bf324c94fad9'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 4, 3]))
+[2021-10-18 21:47:06,098] validator.Validator<Validator:c0403>:DEBUG: Running `setup` with args (5, [UUID('5d57a475-7979-474f-9e81-bf324c94fad9'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 4, 3]).
+[2021-10-18 21:47:06,099] validator.Validator<Validator:c0403>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,099] da.sim.Router<OSProcessContainer-2>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (5, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,099] da.sim.Router<OSProcessContainer-2>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (5, True))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:20514)>.
+[2021-10-18 21:47:06,099] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 20514).
+[2021-10-18 21:47:06,099] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,100] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,100] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0403> to <Node_:c4c01>: (<Command.SetupAck: 12>, (5, True))
+[2021-10-18 21:47:06,100] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (6, [UUID('708398d9-1103-4d7b-a0fa-f82a7872649e'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 5, 3])) to <Validator:c0407> with flags=3
+[2021-10-18 21:47:06,100] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (6, [UUID('708398d9-1103-4d7b-a0fa-f82a7872649e'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 5, 3]))(654 bytes) to <Validator:c0407> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,100] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 662 bytes to ('127.0.0.1', 11947).
+[2021-10-18 21:47:06,100] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: 662/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,101] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,101] da.sim.Router<OSProcessContainer-6>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0407>: (<Command.Setup: 2>, (6, [UUID('708398d9-1103-4d7b-a0fa-f82a7872649e'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 5, 3]))
+[2021-10-18 21:47:06,101] validator.Validator<Validator:c0407>:DEBUG: Running `setup` with args (6, [UUID('708398d9-1103-4d7b-a0fa-f82a7872649e'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 5, 3]).
+[2021-10-18 21:47:06,102] validator.Validator<Validator:c0407>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,102] da.sim.Router<OSProcessContainer-6>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (6, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,102] da.sim.Router<OSProcessContainer-6>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (6, True))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:11947)>.
+[2021-10-18 21:47:06,102] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 11947).
+[2021-10-18 21:47:06,102] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,102] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,102] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0407> to <Node_:c4c01>: (<Command.SetupAck: 12>, (6, True))
+[2021-10-18 21:47:06,102] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (7, [UUID('0177ee69-ed95-4d34-99c3-3f3f77de84a5'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 6, 3])) to <Validator:c0402> with flags=3
+[2021-10-18 21:47:06,103] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (7, [UUID('0177ee69-ed95-4d34-99c3-3f3f77de84a5'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 6, 3]))(654 bytes) to <Validator:c0402> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,103] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 662 bytes to ('127.0.0.1', 21033).
+[2021-10-18 21:47:06,103] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: 662/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,103] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,103] da.sim.Router<OSProcessContainer-1>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0402>: (<Command.Setup: 2>, (7, [UUID('0177ee69-ed95-4d34-99c3-3f3f77de84a5'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 6, 3]))
+[2021-10-18 21:47:06,104] validator.Validator<Validator:c0402>:DEBUG: Running `setup` with args (7, [UUID('0177ee69-ed95-4d34-99c3-3f3f77de84a5'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 6, 3]).
+[2021-10-18 21:47:06,104] validator.Validator<Validator:c0402>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,104] da.sim.Router<OSProcessContainer-1>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (7, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,104] da.sim.Router<OSProcessContainer-1>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (7, True))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:21033)>.
+[2021-10-18 21:47:06,105] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 21033).
+[2021-10-18 21:47:06,105] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,105] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,105] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0402> to <Node_:c4c01>: (<Command.SetupAck: 12>, (7, True))
+[2021-10-18 21:47:06,105] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (8, [UUID('15eeb8e2-fe19-42aa-a31f-8a12e266d893'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 7, 3])) to <Validator:c040a> with flags=3
+[2021-10-18 21:47:06,105] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (8, [UUID('15eeb8e2-fe19-42aa-a31f-8a12e266d893'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 7, 3]))(654 bytes) to <Validator:c040a> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,105] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 662 bytes to ('127.0.0.1', 42001).
+[2021-10-18 21:47:06,105] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: 662/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,105] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,106] da.sim.Router<OSProcessContainer-9>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c040a>: (<Command.Setup: 2>, (8, [UUID('15eeb8e2-fe19-42aa-a31f-8a12e266d893'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 7, 3]))
+[2021-10-18 21:47:06,106] validator.Validator<Validator:c040a>:DEBUG: Running `setup` with args (8, [UUID('15eeb8e2-fe19-42aa-a31f-8a12e266d893'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 7, 3]).
+[2021-10-18 21:47:06,107] validator.Validator<Validator:c040a>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,107] da.sim.Router<OSProcessContainer-9>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (8, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,107] da.sim.Router<OSProcessContainer-9>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (8, True))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:42001)>.
+[2021-10-18 21:47:06,107] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 42001).
+[2021-10-18 21:47:06,107] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,107] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,107] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c040a> to <Node_:c4c01>: (<Command.SetupAck: 12>, (8, True))
+[2021-10-18 21:47:06,107] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (9, [UUID('4eab676c-7a04-4d10-9a66-a72f8bcc2f89'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 8, 3])) to <Validator:c040b> with flags=3
+[2021-10-18 21:47:06,108] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (9, [UUID('4eab676c-7a04-4d10-9a66-a72f8bcc2f89'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 8, 3]))(654 bytes) to <Validator:c040b> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,108] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 662 bytes to ('127.0.0.1', 14699).
+[2021-10-18 21:47:06,108] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: 662/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,108] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,109] da.sim.Router<OSProcessContainer-10>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c040b>: (<Command.Setup: 2>, (9, [UUID('4eab676c-7a04-4d10-9a66-a72f8bcc2f89'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 8, 3]))
+[2021-10-18 21:47:06,109] validator.Validator<Validator:c040b>:DEBUG: Running `setup` with args (9, [UUID('4eab676c-7a04-4d10-9a66-a72f8bcc2f89'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 8, 3]).
+[2021-10-18 21:47:06,109] validator.Validator<Validator:c040b>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,109] da.sim.Router<OSProcessContainer-10>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (9, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,110] da.sim.Router<OSProcessContainer-10>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (9, True))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:14699)>.
+[2021-10-18 21:47:06,110] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 14699).
+[2021-10-18 21:47:06,110] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,110] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,110] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c040b> to <Node_:c4c01>: (<Command.SetupAck: 12>, (9, True))
+[2021-10-18 21:47:06,110] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (10, [UUID('2b9b1023-c95e-4c23-9101-d086c82143e5'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 9, 3])) to <Validator:c0409> with flags=3
+[2021-10-18 21:47:06,110] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (10, [UUID('2b9b1023-c95e-4c23-9101-d086c82143e5'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 9, 3]))(654 bytes) to <Validator:c0409> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,110] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 662 bytes to ('127.0.0.1', 19966).
+[2021-10-18 21:47:06,110] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: 662/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,111] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,111] da.sim.Router<OSProcessContainer-8>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0409>: (<Command.Setup: 2>, (10, [UUID('2b9b1023-c95e-4c23-9101-d086c82143e5'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 9, 3]))
+[2021-10-18 21:47:06,111] validator.Validator<Validator:c0409>:DEBUG: Running `setup` with args (10, [UUID('2b9b1023-c95e-4c23-9101-d086c82143e5'), {<Validator:c0406>, <Validator:c0405>, <Validator:c0408>, <Validator:c0404>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>}, 9, 3]).
+[2021-10-18 21:47:06,112] validator.Validator<Validator:c0409>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,112] da.sim.Router<OSProcessContainer-8>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (10, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,112] da.sim.Router<OSProcessContainer-8>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (10, True))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:19966)>.
+[2021-10-18 21:47:06,112] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,112] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 19966).
+[2021-10-18 21:47:06,112] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,112] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0409> to <Node_:c4c01>: (<Command.SetupAck: 12>, (10, True))
+[2021-10-18 21:47:06,112] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 11) to <Validator:c0406> with flags=3
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 11)(194 bytes) to <Validator:c0406> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 202 bytes to ('127.0.0.1', 13196).
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 11) to <Validator:c0405> with flags=3
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 11)(194 bytes) to <Validator:c0405> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 202 bytes to ('127.0.0.1', 16001).
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 11) to <Validator:c0404> with flags=3
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 11)(194 bytes) to <Validator:c0404> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 202 bytes to ('127.0.0.1', 28679).
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 11) to <Validator:c0408> with flags=3
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 11)(194 bytes) to <Validator:c0408> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 202 bytes to ('127.0.0.1', 50979).
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 11) to <Validator:c0403> with flags=3
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: 202/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: 202/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 11)(194 bytes) to <Validator:c0403> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: 202/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 202 bytes to ('127.0.0.1', 20514).
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: 202/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 11) to <Validator:c0407> with flags=3
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 11)(194 bytes) to <Validator:c0407> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 202 bytes to ('127.0.0.1', 11947).
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 11) to <Validator:c0402> with flags=3
+[2021-10-18 21:47:06,113] da.sim.Router<OSProcessContainer-4>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0405>: (<Command.Start: 1>, 11)
+[2021-10-18 21:47:06,113] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 11)(194 bytes) to <Validator:c0402> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 202 bytes to ('127.0.0.1', 21033).
+[2021-10-18 21:47:06,114] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 11) to <Validator:c040a> with flags=3
+[2021-10-18 21:47:06,114] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 11)(194 bytes) to <Validator:c040a> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 202 bytes to ('127.0.0.1', 42001).
+[2021-10-18 21:47:06,113] da.sim.Router<OSProcessContainer-3>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0404>: (<Command.Start: 1>, 11)
+[2021-10-18 21:47:06,114] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 11) to <Validator:c040b> with flags=3
+[2021-10-18 21:47:06,113] validator.Validator<Validator:c0405>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,113] da.sim.Router<OSProcessContainer-5>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0406>: (<Command.Start: 1>, 11)
+[2021-10-18 21:47:06,114] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 11)(194 bytes) to <Validator:c040b> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 202 bytes to ('127.0.0.1', 14699).
+[2021-10-18 21:47:06,114] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 11) to <Validator:c0409> with flags=3
+[2021-10-18 21:47:06,114] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 11)(194 bytes) to <Validator:c0409> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 202 bytes to ('127.0.0.1', 19966).
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: 202/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,114] da.sim.Router<OSProcessContainer-7>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0408>: (<Command.Start: 1>, 11)
+[2021-10-18 21:47:06,113] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: 202/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,114] validator.Validator<Validator:c0404>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: 202/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,114] da.sim.Router<OSProcessContainer-4>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (11, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: 202/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,114] da.sim.Router<OSProcessContainer-3>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (11, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,114] validator.Validator<Validator:c0406>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,114] da.sim.Router<OSProcessContainer-4>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (11, None))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:16001)>.
+[2021-10-18 21:47:06,114] da.sim.Router<OSProcessContainer-3>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (11, None))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:28679)>.
+[2021-10-18 21:47:06,114] validator.Validator<Validator:c0408>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: 202/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,114] da.sim.Router<OSProcessContainer-5>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (11, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,115] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: 202/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,115] da.sim.Router<OSProcessContainer-7>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (11, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,115] da.sim.Router<OSProcessContainer-5>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (11, None))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:13196)>.
+[2021-10-18 21:47:06,115] da.sim.Router<OSProcessContainer-6>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0407>: (<Command.Start: 1>, 11)
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,115] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,115] da.sim.Router<OSProcessContainer-1>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0402>: (<Command.Start: 1>, 11)
+[2021-10-18 21:47:06,115] da.sim.Router<OSProcessContainer-7>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (11, None))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:50979)>.
+[2021-10-18 21:47:06,114] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,115] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,115] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,115] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 16001).
+[2021-10-18 21:47:06,115] validator.Validator<Validator:c0407>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,115] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,115] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,115] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 28679).
+[2021-10-18 21:47:06,115] validator.Validator<Validator:c0402>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,115] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,115] da.sim.Router<OSProcessContainer-9>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c040a>: (<Command.Start: 1>, 11)
+[2021-10-18 21:47:06,115] da.sim.Router<OSProcessContainer-6>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (11, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,115] da.sim.Router<OSProcessContainer-1>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (11, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,115] da.sim.Router<OSProcessContainer-2>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0403>: (<Command.Start: 1>, 11)
+[2021-10-18 21:47:06,116] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0405> to <Node_:c4c01>: (<Command.StartAck: 11>, (11, None))
+[2021-10-18 21:47:06,115] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,116] validator.Validator<Validator:c040a>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,116] da.sim.Router<OSProcessContainer-6>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (11, None))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:11947)>.
+[2021-10-18 21:47:06,116] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0404> to <Node_:c4c01>: (<Command.StartAck: 11>, (11, None))
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 13196).
+[2021-10-18 21:47:06,116] da.sim.Router<OSProcessContainer-1>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (11, None))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:21033)>.
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 50979).
+[2021-10-18 21:47:06,116] da.sim.Router<OSProcessContainer-9>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (11, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 11947).
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 21033).
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,116] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0406> to <Node_:c4c01>: (<Command.StartAck: 11>, (11, None))
+[2021-10-18 21:47:06,115] da.sim.Router<OSProcessContainer-10>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c040b>: (<Command.Start: 1>, 11)
+[2021-10-18 21:47:06,116] da.sim.Router<OSProcessContainer-9>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (11, None))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:42001)>.
+[2021-10-18 21:47:06,116] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0408> to <Node_:c4c01>: (<Command.StartAck: 11>, (11, None))
+[2021-10-18 21:47:06,116] validator.Validator<Validator:c0403>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,116] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0407> to <Node_:c4c01>: (<Command.StartAck: 11>, (11, None))
+[2021-10-18 21:47:06,116] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0402> to <Node_:c4c01>: (<Command.StartAck: 11>, (11, None))
+[2021-10-18 21:47:06,116] da.sim.Router<OSProcessContainer-8>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0409>: (<Command.Start: 1>, 11)
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 42001).
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,116] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,116] da.sim.Router<OSProcessContainer-2>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (11, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,116] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c040a> to <Node_:c4c01>: (<Command.StartAck: 11>, (11, None))
+[2021-10-18 21:47:06,116] validator.Validator<Validator:c0409>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,116] da.sim.Router<OSProcessContainer-2>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (11, None))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:20514)>.
+[2021-10-18 21:47:06,116] validator.Validator<Validator:c040b>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,117] da.sim.Router<OSProcessContainer-8>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (11, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,117] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 20514).
+[2021-10-18 21:47:06,117] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,117] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0403> to <Node_:c4c01>: (<Command.StartAck: 11>, (11, None))
+[2021-10-18 21:47:06,117] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,117] da.sim.Router<OSProcessContainer-10>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (11, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,117] da.sim.Router<OSProcessContainer-8>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (11, None))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:19966)>.
+[2021-10-18 21:47:06,117] da.sim.Router<OSProcessContainer-10>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (11, None))(212 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:14699)>.
+[2021-10-18 21:47:06,117] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 19966).
+[2021-10-18 21:47:06,117] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,117] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,117] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c0409> to <Node_:c4c01>: (<Command.StartAck: 11>, (11, None))
+[2021-10-18 21:47:06,117] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 220/8192 bytes received from ('127.0.0.1', 14699).
+[2021-10-18 21:47:06,117] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: Sent 220 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,117] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,117] da.sim.Router<MainProcess>:DEBUG: Local forward from <Validator:c040b> to <Node_:c4c01>: (<Command.StartAck: 11>, (11, None))
+[2021-10-18 21:47:06,117] master.Node_<Node_:c4c01>:DEBUG: Creating instances of <class 'client.Client'> using 'process'
+[2021-10-18 21:47:06,117] da.transport.manager.TransportManager<MainProcess>:DEBUG: Initializing with key b'^\x14Jt\xd5\x9a7J\xe8\xf0\xc5U\xa1\x98K\x04\x9a\xbf\x02\x87\xbb\x03\xbbqhM\xc4\xccg?\xdej'...
+[2021-10-18 21:47:06,118] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 18367)
+[2021-10-18 21:47:06,118] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport initialized at address ('127.0.0.1', 36845)
+[2021-10-18 21:47:06,122] da.transport.manager.TransportManager<OSProcessContainer-11>:DEBUG: Starting...
+[2021-10-18 21:47:06,123] da.transport.sock.UdpTransport<OSProcessContainer-11>:DEBUG: Transport started.
+[2021-10-18 21:47:06,123] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: Transport started.
+[2021-10-18 21:47:06,124] da.sim.Router<OSProcessContainer-11>:DEBUG: Process <Client:c040c> registered.
+[2021-10-18 21:47:06,124] da.sim.OSProcessContainer<OSProcessContainer-11>:DEBUG: Process object initialized.
+[2021-10-18 21:47:06,125] client.Client<Client:c040c>:DEBUG: Delayed start.
+[2021-10-18 21:47:06,125] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.NewAck: 16>, (12, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,125] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.NewAck: 16>, (12, None))(192 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:36845)>.
+[2021-10-18 21:47:06,125] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: Initiating connection to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,126] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Accepted connection from ('127.0.0.1', 51094).
+[2021-10-18 21:47:06,127] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 28 bytes to None.
+[2021-10-18 21:47:06,127] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: =========answering b'#KY#\x01\x01\x00\xc8.\xabc\x8d\xad\xf1\x0b\x92\r\xed,\x9d9\x91\x82f\xbe\x8bb\xfc'
+[2021-10-18 21:47:06,127] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: Sent 20 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,127] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 9 bytes to ('127.0.0.1', 51094).
+[2021-10-18 21:47:06,127] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: Connection to ('127.0.0.1', 17029) established.
+[2021-10-18 21:47:06,128] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 200/8192 bytes received from ('127.0.0.1', 36845).
+[2021-10-18 21:47:06,127] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: Sent 200 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,128] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,128] da.sim.Router<MainProcess>:DEBUG: Local forward from <Client:c040c> to <Node_:c4c01>: (<Command.NewAck: 16>, (12, None))
+[2021-10-18 21:47:06,133] da.transport.manager.TransportManager<MainProcess>:DEBUG: Stopping...
+[2021-10-18 21:47:06,133] da.transport.sock.UdpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,133] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Transport stopped.
+[2021-10-18 21:47:06,133] da.transport.manager.TransportManager<MainProcess>:DEBUG: 2/2 transports stopped.
+[2021-10-18 21:47:06,133] da.sim.OSThreadContainer<MainProcess>:DEBUG: 1 instances of Client created.
+[2021-10-18 21:47:06,133] master.Node_<Node_:c4c01>:DEBUG: 1 instances of <class 'client.Client'> created: [<Client:c040c>]
+[2021-10-18 21:47:06,133] master.Node_<Node_:c4c01>:DEBUG: All children acked.
+[2021-10-18 21:47:06,133] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Setup: 2>, (13, [UUID('dc42c777-5693-4e45-b59a-d4fa94051157'), [<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>], 3, 1])) to <Client:c040c> with flags=3
+[2021-10-18 21:47:06,134] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Setup: 2>, (13, [UUID('dc42c777-5693-4e45-b59a-d4fa94051157'), [<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>], 3, 1]))(687 bytes) to <Client:c040c> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,134] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 695 bytes to ('127.0.0.1', 36845).
+[2021-10-18 21:47:06,134] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: 695/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,135] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,135] da.sim.Router<OSProcessContainer-11>:DEBUG: Local forward from <Node_:c4c01> to <Client:c040c>: (<Command.Setup: 2>, (13, [UUID('dc42c777-5693-4e45-b59a-d4fa94051157'), [<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>], 3, 1]))
+[2021-10-18 21:47:06,135] client.Client<Client:c040c>:DEBUG: Running `setup` with args (13, [UUID('dc42c777-5693-4e45-b59a-d4fa94051157'), [<Validator:c0406>, <Validator:c0405>, <Validator:c0404>, <Validator:c0408>, <Validator:c0403>, <Validator:c0407>, <Validator:c0402>, <Validator:c040a>, <Validator:c040b>, <Validator:c0409>], 3, 1]).
+[2021-10-18 21:47:06,135] client.Client<Client:c040c>:DEBUG: `setup` complete.
+[2021-10-18 21:47:06,136] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.SetupAck: 12>, (13, True)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,136] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.SetupAck: 12>, (13, True))(206 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:36845)>.
+[2021-10-18 21:47:06,136] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 214/8192 bytes received from ('127.0.0.1', 36845).
+[2021-10-18 21:47:06,136] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,136] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: Sent 214 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,136] da.sim.Router<MainProcess>:DEBUG: Local forward from <Client:c040c> to <Node_:c4c01>: (<Command.SetupAck: 12>, (13, True))
+[2021-10-18 21:47:06,136] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Start: 1>, 14) to <Client:c040c> with flags=3
+[2021-10-18 21:47:06,136] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Start: 1>, 14)(188 bytes) to <Client:c040c> with flags=3 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,136] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 196 bytes to ('127.0.0.1', 36845).
+[2021-10-18 21:47:06,136] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: 196/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,137] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,137] da.sim.Router<OSProcessContainer-11>:DEBUG: Local forward from <Node_:c4c01> to <Client:c040c>: (<Command.Start: 1>, 14)
+[2021-10-18 21:47:06,137] client.Client<Client:c040c>:DEBUG: `start` command received, commencing...
+[2021-10-18 21:47:06,137] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.StartAck: 11>, (14, None)) to <Node_:c4c01> with flags=3
+[2021-10-18 21:47:06,137] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.StartAck: 11>, (14, None))(206 bytes) to <Node_:c4c01> with flags=3 using <TcpTransport(127.0.0.1:36845)>.
+[2021-10-18 21:47:06,138] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 214/8192 bytes received from ('127.0.0.1', 36845).
+[2021-10-18 21:47:06,138] da.transport.sock.TcpTransport<MainProcess>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,138] da.transport.sock.TcpTransport<OSProcessContainer-11>:DEBUG: Sent 214 bytes to ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,138] da.sim.Router<MainProcess>:DEBUG: Local forward from <Client:c040c> to <Node_:c4c01>: (<Command.StartAck: 11>, (14, None))
+[2021-10-18 21:47:06,138] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>))) to <Validator:c0406> with flags=1
+[2021-10-18 21:47:06,138] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>)))(847 bytes) to <Validator:c0406> with flags=1 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,138] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 855 bytes to ('127.0.0.1', 13196).
+[2021-10-18 21:47:06,138] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>))) to <Validator:c0405> with flags=1
+[2021-10-18 21:47:06,138] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>)))(847 bytes) to <Validator:c0405> with flags=1 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,138] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 855 bytes to ('127.0.0.1', 16001).
+[2021-10-18 21:47:06,138] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>))) to <Validator:c0404> with flags=1
+[2021-10-18 21:47:06,138] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>)))(847 bytes) to <Validator:c0404> with flags=1 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,138] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: 855/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,138] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0'))) to <Validator:c0406> with flags=0
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 855 bytes to ('127.0.0.1', 28679).
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>))) to <Validator:c0408> with flags=1
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>)))(847 bytes) to <Validator:c0408> with flags=1 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,138] da.transport.sock.TcpTransport<OSProcessContainer-5>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 855 bytes to ('127.0.0.1', 50979).
+[2021-10-18 21:47:06,139] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))(266 bytes) to <Validator:c0406> with flags=0 using <UdpTransport(127.0.0.1:18367)>.
+[2021-10-18 21:47:06,138] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: 855/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>))) to <Validator:c0403> with flags=1
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>)))(847 bytes) to <Validator:c0403> with flags=1 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: 855/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 855 bytes to ('127.0.0.1', 20514).
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>))) to <Validator:c0407> with flags=1
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: 855/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,139] da.sim.Router<OSProcessContainer-5>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0406>: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f9027efd0>)))
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>)))(847 bytes) to <Validator:c0407> with flags=1 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 855 bytes to ('127.0.0.1', 11947).
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>))) to <Validator:c0402> with flags=1
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<OSProcessContainer-3>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>)))(847 bytes) to <Validator:c0402> with flags=1 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 855 bytes to ('127.0.0.1', 21033).
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<OSProcessContainer-7>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>))) to <Validator:c040a> with flags=1
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: 855/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>)))(847 bytes) to <Validator:c040a> with flags=1 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 855 bytes to ('127.0.0.1', 42001).
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>))) to <Validator:c040b> with flags=1
+[2021-10-18 21:47:06,139] da.sim.Router<OSProcessContainer-3>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0404>: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f902955d0>)))
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<OSProcessContainer-4>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,139] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>)))(847 bytes) to <Validator:c040b> with flags=1 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: 855/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,139] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0'))) to <Validator:c0405> with flags=0
+[2021-10-18 21:47:06,139] da.sim.Router<OSProcessContainer-7>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0408>: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f8034e410>)))
+[2021-10-18 21:47:06,140] da.transport.sock.TcpTransport<OSProcessContainer-6>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<OSProcessContainer-2>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,140] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))(266 bytes) to <Validator:c0405> with flags=0 using <UdpTransport(127.0.0.1:18367)>.
+[2021-10-18 21:47:06,139] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: 855/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,140] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 855 bytes to ('127.0.0.1', 14699).
+[2021-10-18 21:47:06,140] da.sim.Router<MainProcess>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>))) to <Validator:c0409> with flags=1
+[2021-10-18 21:47:06,140] validator.Validator<Validator:c0404>:ERROR: KeyError(0) when calling handler '_Validator_handler_270' with '{'message': <datastructs.ProposalMsg object at 0x7f7f80350550>}': 0
+[2021-10-18 21:47:06,140] da.transport.sock.TcpTransport<OSProcessContainer-1>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,140] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0'))) to <Validator:c0404> with flags=0
+[2021-10-18 21:47:06,140] validator.Validator<Validator:c0406>:ERROR: KeyError(0) when calling handler '_Validator_handler_270' with '{'message': <datastructs.ProposalMsg object at 0x7f7f80353290>}': 0
+[2021-10-18 21:47:06,140] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: 855/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,140] da.sim.Router<MainProcess>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f80348650>)))(847 bytes) to <Validator:c0409> with flags=1 using <TcpTransport(127.0.0.1:17029)>.
+[2021-10-18 21:47:06,140] da.sim.Router<OSProcessContainer-4>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0405>: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f9027ac50>)))
+[2021-10-18 21:47:06,140] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Sent 855 bytes to ('127.0.0.1', 19966).
+[2021-10-18 21:47:06,140] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: 855/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,140] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))(266 bytes) to <Validator:c0404> with flags=0 using <UdpTransport(127.0.0.1:18367)>.
+[2021-10-18 21:47:06,140] da.sim.Router<OSProcessContainer-1>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0402>: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f9027f610>)))
+[2021-10-18 21:47:06,140] da.transport.sock.TcpTransport<OSProcessContainer-9>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,141] da.transport.sock.TcpTransport<OSProcessContainer-10>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,141] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: 855/8192 bytes received from ('127.0.0.1', 17029).
+[2021-10-18 21:47:06,141] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0'))) to <Validator:c0408> with flags=0
+[2021-10-18 21:47:06,140] da.sim.Router<OSProcessContainer-5>:DEBUG: Local forward from <Client:c040c> to <Validator:c0406>: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))
+[2021-10-18 21:47:06,141] da.api<MainProcess>:INFO: Main process terminated.
+[2021-10-18 21:47:06,140] da.sim.Router<OSProcessContainer-6>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0407>: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f90281050>)))
+[2021-10-18 21:47:06,141] validator.Validator<Validator:c0408>:ERROR: KeyError(0) when calling handler '_Validator_handler_270' with '{'message': <datastructs.ProposalMsg object at 0x7f7f902c2dd0>}': 0
+[2021-10-18 21:47:06,141] da.transport.sock.TcpTransport<OSProcessContainer-8>:DEBUG: 1 message(s) received.
+[2021-10-18 21:47:06,141] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))(266 bytes) to <Validator:c0408> with flags=0 using <UdpTransport(127.0.0.1:18367)>.
+[2021-10-18 21:47:06,141] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0'))) to <Validator:c0403> with flags=0
+[2021-10-18 21:47:06,140] da.sim.Router<OSProcessContainer-2>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0403>: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f90287050>)))
+[2021-10-18 21:47:06,141] da.sim.Router<OSProcessContainer-9>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c040a>: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f901c3810>)))
+[2021-10-18 21:47:06,142] da.sim.Router<OSProcessContainer-8>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c0409>: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f902c2c10>)))
+[2021-10-18 21:47:06,142] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))(266 bytes) to <Validator:c0403> with flags=0 using <UdpTransport(127.0.0.1:18367)>.
+[2021-10-18 21:47:06,141] da.sim.Router<OSProcessContainer-10>:DEBUG: Local forward from <Node_:c4c01> to <Validator:c040b>: (<Command.Message: 20>, (None, ('proposal_message', <datastructs.ProposalMsg object at 0x7f7f90255f10>)))
+[2021-10-18 21:47:06,142] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0'))) to <Validator:c0407> with flags=0
+[2021-10-18 21:47:06,142] validator.Validator<Validator:c0407>:ERROR: KeyError(0) when calling handler '_Validator_handler_270' with '{'message': <datastructs.ProposalMsg object at 0x7f7f8034a590>}': 0
+[2021-10-18 21:47:06,142] da.sim.Router<OSProcessContainer-3>:DEBUG: Local forward from <Client:c040c> to <Validator:c0404>: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))
+[2021-10-18 21:47:06,141] validator.Validator<Validator:c0402>:ERROR: KeyError(0) when calling handler '_Validator_handler_270' with '{'message': <datastructs.ProposalMsg object at 0x7f7f90284a90>}': 0
+[2021-10-18 21:47:06,142] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))(266 bytes) to <Validator:c0407> with flags=0 using <UdpTransport(127.0.0.1:18367)>.
+[2021-10-18 21:47:06,142] validator.Validator<Validator:c0409>:ERROR: KeyError(0) when calling handler '_Validator_handler_270' with '{'message': <datastructs.ProposalMsg object at 0x7f7f8034d790>}': 0
+[2021-10-18 21:47:06,142] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0'))) to <Validator:c0402> with flags=0
+[2021-10-18 21:47:06,141] da.sim.Router<OSProcessContainer-4>:DEBUG: Local forward from <Client:c040c> to <Validator:c0405>: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))
+[2021-10-18 21:47:06,142] validator.Validator<Validator:c040a>:ERROR: KeyError(0) when calling handler '_Validator_handler_270' with '{'message': <datastructs.ProposalMsg object at 0x7f7f803488d0>}': 0
+[2021-10-18 21:47:06,142] da.sim.Router<OSProcessContainer-7>:DEBUG: Local forward from <Client:c040c> to <Validator:c0408>: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))
+[2021-10-18 21:47:06,143] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))(266 bytes) to <Validator:c0402> with flags=0 using <UdpTransport(127.0.0.1:18367)>.
+[2021-10-18 21:47:06,143] validator.Validator<Validator:c040b>:ERROR: KeyError(0) when calling handler '_Validator_handler_270' with '{'message': <datastructs.ProposalMsg object at 0x7f7f80348250>}': 0
+[2021-10-18 21:47:06,143] validator.Validator<Validator:c0405>:ERROR: KeyError(0) when calling handler '_Validator_handler_270' with '{'message': <datastructs.ProposalMsg object at 0x7f7f8034f1d0>}': 0
+[2021-10-18 21:47:06,142] validator.Validator<Validator:c0403>:ERROR: KeyError(0) when calling handler '_Validator_handler_270' with '{'message': <datastructs.ProposalMsg object at 0x7f7f902c2e10>}': 0
+[2021-10-18 21:47:06,143] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0'))) to <Validator:c040a> with flags=0
+[2021-10-18 21:47:06,143] da.sim.Router<OSProcessContainer-6>:DEBUG: Local forward from <Client:c040c> to <Validator:c0407>: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))
+[2021-10-18 21:47:06,143] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))(266 bytes) to <Validator:c040a> with flags=0 using <UdpTransport(127.0.0.1:18367)>.
+[2021-10-18 21:47:06,144] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0'))) to <Validator:c040b> with flags=0
+[2021-10-18 21:47:06,144] da.sim.Router<OSProcessContainer-1>:DEBUG: Local forward from <Client:c040c> to <Validator:c0402>: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))
+[2021-10-18 21:47:06,144] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))(266 bytes) to <Validator:c040b> with flags=0 using <UdpTransport(127.0.0.1:18367)>.
+[2021-10-18 21:47:06,144] da.sim.Router<OSProcessContainer-2>:DEBUG: Local forward from <Client:c040c> to <Validator:c0403>: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))
+[2021-10-18 21:47:06,144] da.sim.Router<OSProcessContainer-11>:DEBUG: * Received forwarding request: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0'))) to <Validator:c0409> with flags=0
+[2021-10-18 21:47:06,144] da.sim.Router<OSProcessContainer-11>:DEBUG: ** Forwarding (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))(266 bytes) to <Validator:c0409> with flags=0 using <UdpTransport(127.0.0.1:18367)>.
+[2021-10-18 21:47:06,144] da.sim.Router<OSProcessContainer-9>:DEBUG: Local forward from <Client:c040c> to <Validator:c040a>: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))
+[2021-10-18 21:47:06,145] da.sim.Router<OSProcessContainer-10>:DEBUG: Local forward from <Client:c040c> to <Validator:c040b>: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))
+[2021-10-18 21:47:06,145] da.sim.Router<OSProcessContainer-8>:DEBUG: Local forward from <Client:c040c> to <Validator:c0409>: (<Command.Message: 20>, (None, ('client_transactions', 'Client 1 - message0')))
+[2021-10-18 21:47:06,146] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Peer disconnected: ('127.0.0.1', 36845).
+[2021-10-18 21:47:06,146] da.transport.sock.TcpTransport<MainProcess>:DEBUG: Cleanup connection to ('127.0.0.1', 36845).

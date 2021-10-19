@@ -1,8 +1,7 @@
-from ledger import Ledger
-from blocktree import BlockTree
+
 from datastructs import TimeoutMsg
 from datastructs import TC
-from safety import Safety
+
 
 class Pacemaker:
     def __init__(self,current_round,last_round_tc,pending_timeouts,safety_module,block_tree_module):
