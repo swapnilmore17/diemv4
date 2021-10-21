@@ -12,5 +12,6 @@ class Client(process):
             for j in range(len(validators_list)):
                 message = 'Client 1' + ' - ' + 'message' + str(i)
                 send(('client_transactions',message),to=validators_list[j])
+                output('Client sent transaction to validators')
 
     #def receive(msg=('done',from_=p)):

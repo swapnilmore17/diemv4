@@ -28,6 +28,7 @@ class Main:
         self.leader_election = LeaderElection(
             self.validator_list, 10, 0, self.ledger, self.pacemaker)  # remaining values
 
+        print('Main initialized')
     # def start_event_processing(self,message,current_round, leader,f):
 
     def process_certificate_qc(self, qc):
@@ -53,6 +54,7 @@ class Main:
         leader_index = self.leader_election.get_leader(current_round)
         leader = self.validator_list[leader_index]
         if p.block.round != round or p.sender != leader or p.author != leader:
+            print('proposal message')
             return None
         self.block_tree.execute_and_insert(p)
         vote_msg = self.safety.make_vote(p.block, p.last_round_tc)
@@ -60,7 +62,9 @@ class Main:
             next_leader_index = self.leader_election.get_leader(
                 current_round + 1)
             #next_leader = self.validator_list[next_leader_index]
+            print('proposal message')
             return (vote_msg, next_leader_index)
+        print('proposal message')
         return None
 
         """

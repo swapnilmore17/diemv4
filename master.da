@@ -15,22 +15,23 @@ def main():
     nprocs=10
     f_nodes=0
     n_messages=1
-
+    
 
     validator_set = new(Validator,num=nprocs)
     validator_list = list(validator_set)
     validator_set_id = [uuid.uuid4() for x in range(len(validator_set))]
+    client = new(Client)
+    setup(client,[uuid.uuid4(),validator_list,f_nodes,n_messages])
+    start(client)
     
     for i in range(len(validator_list)): 
         setup(validator_list[i],[validator_set_id[i],validator_set,i,f_nodes])
     start(validator_set)
     #client_config = {}
     
-    client = new(Client)
-    setup(client,[uuid.uuid4(),validator_list,f_nodes,n_messages])
-    start(client)
     
-    '''last_round_tc = TC(0,None,None)
+    print('Genesis Block ready')
+    last_round_tc = TC(0,0,None)
     high_commit_qc = QC(
     VoteInfo(0,0,0,0,0),
     LedgerCommitInfo('str','str'),
@@ -41,4 +42,4 @@ def main():
     
     first_proposal = ProposalMsg(block,last_round_tc,high_commit_qc)
     for x in validator_set:
-        send(('proposal_message',first_proposal),to=x)  '''  
+        send(('proposal_message',first_proposal),to=x) 

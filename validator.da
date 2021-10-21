@@ -24,10 +24,7 @@ class Validator(process):
 
     def run():
         
-        '''if main.pacemaker.current_round ==0:
-            if validator_id == 0:
-                main.process_proposal_message()'''
-
+        
 
         main.pacemaker.run_done = False
         while not main.pacemaker.run_done:
@@ -38,9 +35,6 @@ class Validator(process):
         #print(True)
 
     #wait for next event and call event processing
-    '''def receive(msg=('done',),from_=p):
-        main.pacemaker.round_done=True
-        print(True)'''
 
     def receive(msg=('proposal_message',message)):
         x = main.process_proposal_message(message,main.pacemaker.current_round)
@@ -67,6 +61,7 @@ class Validator(process):
 
     def receive(msg=('client_transactions',message)):
         main.mempool.add_transactions(message)
+        output('Client message received')
 
     '''
     Procedure start event processing(M)
