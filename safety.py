@@ -11,7 +11,7 @@ class Safety:
         # self.__private_key = private_key # Own private key
         # self.__public_keys = public_keys # Public keys of all validators
         self.__highest_vote_round = highest_vote_round  # initially 0
-        self.__highest_qc_round = None  # trying 0
+        self.__highest_qc_round = 0  # trying 0
 
     def __increase_highest_vote_round(self, round):
         # commit not to vote in rounds lower than round
@@ -50,8 +50,8 @@ class Safety:
     """
 
     def __safe_to_timeout(self, round, qc_round, tc):
-        if qc_round < self.highest_qc_round or round <= max(
-                self.highest_vote_round - 1, qc_round):
+        if qc_round < self.__highest_qc_round or round <= max(
+                self.__highest_vote_round - 1, qc_round):
             # respect highest qc round and don’t timeout in a past round
             return False
         # qc or tc must allow entering the round to timeout

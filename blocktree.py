@@ -77,8 +77,11 @@ class BlockTree:
     """
 
     def process_qc(self, qc):
+        
         if qc.ledger_commit_info:
+            
             ledger_state = self.ledger_module.commit(qc.vote_info.parent_id)
+            print('ledger_module committed qc')
             self.pending_block_tree = self.pending_block_tree.prune(
                 qc.vote_info.parent_id)
             self.high_commit_qc = max(

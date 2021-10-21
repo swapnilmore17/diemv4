@@ -32,8 +32,9 @@ class Main:
     # def start_event_processing(self,message,current_round, leader,f):
 
     def process_certificate_qc(self, qc):
-        # print('main')
+        print('inside process qc')
         self.block_tree.process_qc(qc)
+        print('processed qc')
         self.leader_election.update_leaders(qc)
         self.pacemaker.advance_round_qc(qc.vote_info.round)
 
@@ -45,12 +46,17 @@ class Main:
         """
 
     def process_proposal_message(self, p, current_round):
-        # print('main')
+
+        if p.block.id=='1':
+            block_id=self.ledger.speculate(None,"1","str")
+            
+        print('main')
         self.process_certificate_qc(p.block.qc)
+        print('main2')
         self.process_certificate_qc(p.high_commit)
         self.pacemaker.advance_round_tc(p.last_round_tc)
         round = self.pacemaker.current_round
-
+        
         leader_index = self.leader_election.get_leader(current_round)
         leader = self.validator_list[leader_index]
         if p.block.round != round or p.sender != leader or p.author != leader:

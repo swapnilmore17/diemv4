@@ -14,7 +14,7 @@ class Ledger:
     # Adds txns as payload to the node in the pending tree and maintains
     # mapping
     def speculate(self, prev_block_id, block_id, txns):
-        # print('4')
+        print('4')
         parent_id = None
         if prev_block_id is not None:
             # fetch parent ID if it exists
@@ -27,7 +27,7 @@ class Ledger:
             node_id = self.tree_utility.add(txns, parent_id)
             self.blockid_to_nodeid_mapper[block_id] = node_id
 
-        output('Added new block')
+        print('Added new block')
         return block_id
 
     # Returns Ledger State/ Commit ID based on Block ID
@@ -38,12 +38,17 @@ class Ledger:
 
     # Commits block to persistent ledger and returns ledger state/ commit ID
     def commit(self, block_id):
+        print('ledger')
+        '''if block_id not in self.blockid_to_nodeid_mapper.keys():
+            node_id = '''
+
         node_id = self.blockid_to_nodeid_mapper[block_id]
-        # print('2')
+        print('got matching block id in tree')
         if node_id is not None:
             node = self.tree_utility.get_node(node_id)
             filename = "ledgerstore"
             ledgerfile = open(filename, "ab")
+            print('test')
             # Generate hash of previous state with committed block's payload
             self.ledger_state = str(self.ledger_state) + " " + str(node.data)
             self.blockid_to_commitid_mapper[block_id] = str(self.ledger_state)

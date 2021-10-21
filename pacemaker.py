@@ -69,10 +69,14 @@ class Pacemaker:
 
         ###########
         sender_list = [x.sender for x in self.pending_timeouts[tmo_info.round]]
-
+        print('timeout')
         if tmo_info.sender not in sender_list:
-            self.pending_timeouts[tmo_info.round] = self.pending_timeouts[tmo_info.round] + [
+            if tmo_info.round in self.pending_timeouts.keys():
+                
+                self.pending_timeouts[tmo_info.round] = self.pending_timeouts[tmo_info.round] + [
                 tmo_info]
+            else:
+                self.pending_timeouts[tmo_info.round] = []
         if len(sender_list) == f + 1:
             self.stop_timer(self.current_round)
 
