@@ -14,7 +14,7 @@ class Ledger:
     # Adds txns as payload to the node in the pending tree and maintains
     # mapping
     def speculate(self, prev_block_id, block_id, txns):
-        print('4')
+        print('inside ledger speculate')
         parent_id = None
         if prev_block_id is not None:
             # fetch parent ID if it exists

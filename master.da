@@ -3,6 +3,7 @@ from datastructs import TC, ProposalMsg
 from validator import Validator
 from client import Client
 import uuid
+import json
 from blocktree import QC
 from blocktree import VoteInfo
 from blocktree import LedgerCommitInfo
@@ -12,10 +13,12 @@ config(channel='fifo')
 def main():
     
     #read config file
-    nprocs=10
-    f_nodes=0
-    n_messages=1
-    
+
+    data = json.load(open('config1.json',))
+    print(data['config'])
+    nprocs = data['config']['validators']
+    f_nodes = data['config']['f_nodes']
+    n_messages = data['config']['messages']
 
     validator_set = new(Validator,num=nprocs)
     validator_list = list(validator_set)
